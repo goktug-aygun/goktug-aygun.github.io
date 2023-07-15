@@ -1,6 +1,7 @@
 html {
     scroll-snap-type: y proximity;
     overflow-y: scroll;
+    width: 100vw;
 }
 
 body {
@@ -12,15 +13,14 @@ a {
     color: white;
 }
 
-header {
-    border-bottom: 1px solid rgb(33, 37, 41);
-}
+
 
 .navbar {
     opacity: 0.9;
     top: 0;
     position: fixed;
     min-width: 100vw;
+    z-index: 999;
 }
 
 .page {
@@ -72,8 +72,9 @@ header {
     font-size: 1.4em;
 }
 
-/* About Me Page End */
 /* ----------------- */
+/* About Me Page End */
+
 
 /* ----------------- */
 /* Project Page Start */
@@ -118,9 +119,9 @@ header {
 }
 
 /* Project Page End */
-/* ----------------- */
+/* ---------------- */
 
-/* ----------------- */
+/* ---------------- */
 /* Skill Page Start */
 
 .skill-container {
@@ -136,9 +137,9 @@ header {
 }
 
 /* Skill Page End */
-/* ----------------- */
+/* -------------- */
 
-/* ----------------- */
+/* ------------------ */
 /* For Mobile Devices */
 @media (min-width : 319px) and (max-width : 480px) {
 
@@ -146,7 +147,31 @@ header {
         scroll-snap-type: none;
     }
 
-    .la-img,
+    .navbar {
+        position: fixed !important;
+        top: 0 !important;
+    }
+
+    /* Welcome Page Start */
+    /* ------------------ */
+    .landing-box {
+        justify-content: center;
+    }
+
+    .lead {
+        font-size: 1em;
+    }
+
+    .landing-text {
+        font-size: 1.8em;
+
+    }
+    
+    /* Welcome Page End */
+    /* ---------------- */
+
+    /* ----------------- */
+    /* About Me Page Start */
     .me-img {
         width: 80%;
     }
@@ -163,37 +188,27 @@ header {
         text-align: center;
     }
 
-    .landing-text {
-        font-size: 1.8em;
-
-    }
-
     .me-box {
         margin-top: 1.5vh;
     }
+    /* About Me Page End */
+    /* ----------------- */
+    
 
     .welcome-box {
         margin-top: 10vh;
     }
 
+    /* ---------------- */
+    /* Skill Page Start */
+    
     .skill-container {
         max-width: 100vw;
     }
 
-    .navbar {
-        position: fixed !important;
-        top: 0 !important;
+    /* Skill Page End */
+    /* -------------- */
 
-    }
-
-
-    .landing-box {
-        justify-content: center;
-    }
-
-    .lead {
-        font-size: 1em;
-    }
 }
 
 
@@ -214,8 +229,10 @@ header {
         position: fixed;
         top: 0;
     }
+
+    /* --------------- */
     /* Home Page Start */
-    /* ------------------- */ 
+    
     .landing-text {
         font-size: 3em;
     }
@@ -223,11 +240,12 @@ header {
     .landing-box {
         justify-content: center;
     }
-    /* Home Page End */
-    /* ------------------- */ 
 
+    /* Home Page End */
+    /* ------------------- */
+
+    /* ------------------- */
     /* About Me Page Start */
-    /* ------------------- */    
     .me-text {
         text-align: center;
     }
@@ -235,7 +253,7 @@ header {
     .me-box {
         margin-top: 3vh;
     }
-    
+
     .me-box span {
         font-size: 1.5em;
     }
@@ -250,15 +268,15 @@ header {
     }
 
     /* About Me Page End */
-    /* ------------------- */
+    /* ----------------- */
 
+    /* ---------------- */
     /* Skill Page Start */
-    /* ------------------- */
     .skill-list {
         flex-direction: row;
         justify-content: space-between;
     }
 
     /* Skill Page End */
-    /* ------------------- */
+    /* -------------- */
 }
