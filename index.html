@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Title Icon Link -->
-  <link rel="icon" href="images/icon.png" type="image/icon type">
+  <link rel="icon" href="images/website-icon.png" type="image/icon type">
   <title>Goktug Aygun</title>
   <!-- Bootstrap CSS Link -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -19,6 +19,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+  <!-- Test Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Nerko+One&family=Sedgwick+Ave&family=Sedgwick+Ave+Display&family=Sriracha&family=Tillana:wght@600&display=swap"
+    rel="stylesheet">
+
 
 </head>
 
@@ -88,7 +94,7 @@
       </div>
       <div class="landing-box col-xl-6 d-flex align-items-center">
         <span class="landing-text p-4">
-          Hey! It's Göktug.
+          Hey! lt's Göktuğ.
         </span>
       </div>
     </div>
@@ -328,24 +334,24 @@
         <form>
           <!-- Name -->
           <div class="form-floating">
-            <input required type="name" id="name" class="form-control my-2 my-md-3 my-lg-4" placeholder="Your Name">
+            <input type="name" id="name" class="form-control my-2 my-md-3 my-lg-4" placeholder="Your Name">
             <label for="name" class="form-label">Your Name</label>
           </div>
           <!-- Email -->
           <div class="form-floating">
-            <input required type="email" id="email" class="form-control my-2 my-md-3 my-lg-4" placeholder="Your Email">
+            <input type="email" id="email" class="form-control my-2 my-md-3 my-lg-4" placeholder="Your Email">
             <label for="email" class="form-label">Your Email</label>
           </div>
           <!-- Phone Number -->
           <div class="form-floating">
-            <input type="tel" id="number" class="form-control my-2 my-md-3 my-lg-4"
-              placeholder="Your Phone Number (Not Required)">
-            <label for="number" class="form-label">Your Phone Number <span class="text-muted">(Not
+            <input type="text" id="number" class="form-control my-2 my-md-3 my-lg-4"
+              placeholder="Your Phone Number (Not Required)" inputmode="numeric">
+            <label for="number" class="form-label" pattern="[0-9]+">Your Phone Number <span class="text-muted">(Not
                 Required)</span></label>
           </div>
           <!-- Message -->
           <div class="form-floating">
-            <input required type="text" id="msg" class="form-control  my-2 my-md-3  my-lg-4 message-box"
+            <input type="text" id="msg" class="form-control  my-2 my-md-3  my-lg-4 message-box"
               placeholder="Your Message">
             <label for="msg" class="form-label">Your Message</label>
           </div>
@@ -355,12 +361,38 @@
         </form>
       </div>
     </div>
+    <div id="toast-box"></div>
   </section>
 
   <script>
-    function clearInput(target) {
-      target.value = "";
+
+    // Toast
+
+    let toastbox = document.getElementById("toast-box");
+    let name_warning = "<i class='bi bi-exclamation-triangle'></i> Please write your name.";
+    let mail_warning = "<i class='bi bi-exclamation-triangle'></i>Please write your email.";
+    let message_warning = "<i class='bi bi-exclamation-triangle'></i>Please write your message.";
+    let valid_warning = "<i class='bi bi-hand-thumbs-up'></i>Thank you for your mail! I will get back to you soon.";
+
+    function show(msg) {
+      let toast = document.createElement("div");
+      toast.classList.add("toast");
+      toast.innerHTML = msg;
+      toastbox.appendChild(toast);
+
+      if (msg.includes("Please")) {
+        toast.classList.add("invalid");
+      }
+      if (msg.includes("Thank")) {
+        toast.classList.add("valid");
+      }
+
+      setTimeout(() => {
+        toast.remove();
+      }, 3000);
     }
+
+    // Toast
 
     function validateForm() {
       var nameInput = document.getElementById("name");
@@ -368,32 +400,41 @@
       var msgInput = document.getElementById("msg");
 
       if (nameInput.value.trim() === "") {
-        alert("Please enter your name.");
+        show(name_warning);
         nameInput.focus();
         return false;
       }
 
       if (emailInput.value.trim() === "") {
-        alert("Please enter your email address.");
+        show(mail_warning);
         emailInput.focus();
         return false;
       }
 
       if (msgInput.value.trim() === "") {
-        alert("Please type your message.");
+        show(message_warning);
         msgInput.focus();
         return false;
       }
+
+      show(valid_warning);
+      sendMail();
+      console.log("ok");
       return true;
     }
 
     function formSubmit(event) {
       event.preventDefault();
       if (validateForm()) {
-        sendMail();
+        console.log("valid");
+      } else {
+        console.log("not valid");
       }
-
       return false;
+    }
+
+    function clearInput(target) {
+      target.value = "";
     }
 
     function sendMail() {
@@ -412,7 +453,6 @@
 
       emailjs.send(serviceID, templateID, params)
         .then(res => {
-          alert("Thank you for your mail! I will get back to you soon.");
           clearInput(document.querySelector("#name"));
           clearInput(document.querySelector("#email"));
           clearInput(document.querySelector("#number"));
@@ -421,10 +461,13 @@
         .catch();
     }
   </script>
+
+
   <!-- Bootstrap Script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
+
   <!-- Nav Script -->
   <script>
 
@@ -435,7 +478,7 @@
           var targetId = this.getAttribute('data-target');
           var targetElement = document.getElementById(targetId);
           targetElement.scrollIntoView({ behavior: 'smooth' });
-          
+
           var x = window.matchMedia("(max-width: 992px)")
           if (x.matches) {
             document.querySelector(".navbar-toggler").click();
@@ -447,7 +490,6 @@
   </script>
 
   <!-- Email.js Script -->
-
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 </body>

@@ -1,5 +1,5 @@
 html {
-    scroll-snap-type: y proximity;
+    /* scroll-snap-type: y proximity; */
     overflow-y: scroll;
     width: 100vw;
 }
@@ -28,6 +28,7 @@ a {
     scroll-snap-align: start;
     min-height: 100vh;
     min-width: 100vw;
+    position: relative;
 }
 
 .scroll:hover {
@@ -37,8 +38,8 @@ a {
 /* ----------------- */
 /* Home Page Start */
 .landing-text {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 4em;
+    font-family: 'Sedgwick Ave Display', "Sedgwick Ave", "Sriracha", "cursive";
+    font-size: 5em;
 }
 
 .la-img {
@@ -139,6 +140,69 @@ a {
 /* Skill Page End */
 /* -------------- */
 
+/* ---------------- */
+/* Contact Page Start */
+
+
+/* Toaster */
+#toast-box{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+}
+
+#toast-box .toast{
+    width: 300px;
+    height: 80px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    font-weight: 500;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    color: black;
+    z-index: 12;
+    position: relative;
+    animation: fadeIn 0.25s linear forwards, fadeOut 0.25s 2.75s linear forwards; 
+}
+
+#toast-box .toast::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    animation: anim 3s linear forwards;
+}
+
+#toast-box .toast.invalid::after{
+    background: orange;
+}
+
+#toast-box .toast.valid::after{
+    background: green;
+}
+
+
+#toast-box .toast i{
+    /* margin-right: 10px; */
+    /* margin-left: 10px; */
+    margin: 0px 10px;
+    font-size: 2rem;
+}
+
+
+/* Contact Page End */
+/* -------------- */
+
+
+
 /* ------------------ */
 /* For Mobile Devices */
 @media (min-width : 319px) and (max-width : 480px) {
@@ -163,7 +227,8 @@ a {
     }
 
     .landing-text {
-        font-size: 1.8em;
+        font-size: 3em;
+        /* color: red; */
 
     }
     
@@ -209,8 +274,24 @@ a {
     /* Skill Page End */
     /* -------------- */
 
-}
+    /* Contact Page Start */
+    /* ------------------ */
+    
+    #toast-box{
+        width: 100%;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        /* background-color: rgba(255, 0, 0, 0.2); */
+    }
 
+    #toast-box .toast{
+        width: 100%;      
+    }
+
+    /* ---------------- */
+    /* Contact Page End */
+}
 
 
 /* For Tablets */
@@ -234,7 +315,7 @@ a {
     /* Home Page Start */
     
     .landing-text {
-        font-size: 3em;
+        font-size: 5em;
     }
 
     .landing-box {
@@ -279,4 +360,51 @@ a {
 
     /* Skill Page End */
     /* -------------- */
+
+    /* Contact Page Start */
+    /* ------------------ */
+    
+    #toast-box{
+        width: 100%;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        /* background-color: rgba(255, 0, 0, 0.2); */
+    }
+
+    #toast-box .toast{
+        width: 100%;
+        font-size: 1.5em;      
+    }
+    /* ---------------- */
+    /* Contact Page End */
+}
+
+
+
+
+/* Animations */
+
+@keyframes anim{
+    100%{
+        width: 0%;
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeOut{
+    100%{
+        opacity: 0;
+    }
+    0%{
+        opacity: 100%;
+    }
 }
