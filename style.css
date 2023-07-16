@@ -1,5 +1,5 @@
 html {
-    /* scroll-snap-type: y proximity; */
+    scroll-snap-type: y proximity;
     overflow-y: scroll;
     width: 100vw;
 }
@@ -38,7 +38,6 @@ a {
 /* ----------------- */
 /* Home Page Start */
 .landing-text {
-    font-family: 'Sedgwick Ave Display', "Sedgwick Ave", "Sriracha", "cursive";
     font-size: 5em;
 }
 
@@ -145,6 +144,10 @@ a {
 
 
 /* Toaster */
+#contact-page{
+    padding-bottom: 150px !important;
+}
+
 #toast-box{
     position: absolute;
     bottom: 30px;
@@ -191,8 +194,6 @@ a {
 
 
 #toast-box .toast i{
-    /* margin-right: 10px; */
-    /* margin-left: 10px; */
     margin: 0px 10px;
     font-size: 2rem;
 }
@@ -227,8 +228,7 @@ a {
     }
 
     .landing-text {
-        font-size: 3em;
-        /* color: red; */
+        font-size: 2.5em;
 
     }
     
@@ -277,6 +277,10 @@ a {
     /* Contact Page Start */
     /* ------------------ */
     
+    #contact-page{
+        padding-bottom: 50px !important;
+    }
+
     #toast-box{
         width: 100%;
         right: 0;
@@ -363,7 +367,8 @@ a {
 
     /* Contact Page Start */
     /* ------------------ */
-    
+ 
+
     #toast-box{
         width: 100%;
         right: 0;

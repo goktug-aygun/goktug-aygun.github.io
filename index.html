@@ -93,7 +93,7 @@
         <img class="memoji-img" src="images/memoji-wave.png">
       </div>
       <div class="landing-box col-xl-6 d-flex align-items-center">
-        <span class="landing-text p-4">
+        <span id="landing-text" class="landing-text p-4">
           Hey! lt's Göktuğ.
         </span>
       </div>
@@ -461,6 +461,32 @@
         .catch();
     }
   </script>
+
+  <!-- Font Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      changeFont();
+    });
+
+    function changeFont() {
+      let landingText = document.getElementById("landing-text");
+      let x = Math.ceil(Math.random() * 3);
+
+      if(x == 1)
+      {
+        landingText.style.fontFamily = "Sedgwick Ave, cursive";
+      }
+      else if (x == 2)
+      {
+        landingText.style.fontFamily = "Sedgwick Ave Display, cursive";
+      }
+      else
+      {
+        landingText.style.fontFamily = "Sriracha, cursive";
+      }
+    }
+  </script>
+
 
 
   <!-- Bootstrap Script -->
