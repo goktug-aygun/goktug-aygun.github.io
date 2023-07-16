@@ -419,18 +419,12 @@
 
       show(valid_warning);
       sendMail();
-      console.log("ok");
       return true;
     }
 
     function formSubmit(event) {
       event.preventDefault();
-      if (validateForm()) {
-        console.log("valid");
-      } else {
-        console.log("not valid");
-      }
-      return false;
+      return validateForm();
     }
 
     function clearInput(target) {
