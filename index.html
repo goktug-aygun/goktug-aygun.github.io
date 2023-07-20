@@ -83,10 +83,8 @@
     <!-- navbar end -->
   </header>
 
-  <section class="page pt-5" id="home-page">
-    <div class="text-center">
-      <h1 class="pt-3">Home</h1>
-    </div>
+  <section class="page odd pt-5" id="home-page">
+    
 
     <div class="welcome-box container-fluid d-flex flex-xl-row flex-column">
       <div class="col-xl-6 d-flex justify-content-center">
@@ -100,7 +98,7 @@
     </div>
   </section>
 
-  <section class="page pt-3 p-md-5" id="me-page">
+  <section class="page even pt-3 p-md-5" id="me-page">
     <div class="text-center py-3">
       <h1 class="pt-3">About Me</h1>
     </div>
@@ -121,7 +119,7 @@
     </div>
   </section>
 
-  <section class="page p-5" id="projects-page">
+  <section class="page odd p-5" id="projects-page">
     <div class="text-center">
       <h1 class="pt-3">Projects and Experience</h1>
       <p class="lead py-3 py-md-5">Here are some of the projects to which I have contributed. During these projects, I
@@ -207,7 +205,7 @@
             <h4 class="project-title">Marketing and Institutional Communications Team Member</h4>
             <p>
               This is a team of more than 70 people. I deliver presentation and give speeches about Sabancı University.
-              As a team of university students, we direct events for high school students
+              As a team of university students, we direct events for high school students.
             </p>
             <div class="card-footer mt-auto">
               <p class="interval pt-auto text-muted text-center">Since Sep. 2022</p>
@@ -269,7 +267,7 @@
     </div>
   </section>
 
-  <section class="page py-5" id="skills-page">
+  <section class="page even py-5" id="skills-page">
     <div class="text-center">
       <h1 class="pt-3">Skills / CV</h1>
       <p class="lead py-3 py-md-5 px-4">Below are some of the programming languages and tools that I practiced with
@@ -320,7 +318,7 @@
 
   </section>
 
-  <section class="page p-5" id="contact-page">
+  <section class="page odd p-5" id="contact-page">
     <div class="text-center">
       <h1 class="pt-2">Contact</h1>
       <p class="lead pt-1">Please feel free to reach out if you have any questions
@@ -419,18 +417,12 @@
 
       show(valid_warning);
       sendMail();
-      console.log("ok");
       return true;
     }
 
     function formSubmit(event) {
       event.preventDefault();
-      if (validateForm()) {
-        console.log("valid");
-      } else {
-        console.log("not valid");
-      }
-      return false;
+      return validateForm();
     }
 
     function clearInput(target) {

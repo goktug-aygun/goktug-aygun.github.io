@@ -24,11 +24,17 @@ a {
 }
 
 .page {
-    background-color: #dadce0;
     scroll-snap-align: start;
     min-height: 100vh;
     min-width: 100vw;
     position: relative;
+}
+
+.even{
+    background-color: #EEF0F5;
+}
+.odd{
+    background-color: #dadce0;
 }
 
 .scroll:hover {
@@ -374,7 +380,6 @@ a {
         right: 0;
         left: 0;
         bottom: 0;
-        /* background-color: rgba(255, 0, 0, 0.2); */
     }
 
     #toast-box .toast{
