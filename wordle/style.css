@@ -221,4 +221,9 @@ body, html {
     {
         width:98%;
     }
+
+    .second-row button
+    {
+        font-size : 18px; 
+    }
 }
