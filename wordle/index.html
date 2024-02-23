@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>,
+
+    <script src="main.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style2.css"> -->
+
+    <!-- Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class = "outer"> <!--  tum ekran --> 
+        <div class = " inner"> <!--  mobil ekran -->
+            <div class = "game"> <!--  oyun ekrani-->
+                <div class= "container">
+                    <div class = "kutular"> 
+                        <div class = "row">
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                        </div>
+                        <div class = "row">
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                        </div>
+                        <div class = "row">
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                        </div>
+                        <div class = "row">
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                        </div>
+                        <div class = "row">
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                        </div>
+                        <div class = "row">
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                            <div class = "tile"></div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+                <div class = "tuslar">
+                    
+                    <div class ="first-row">
+                        <div class="message"></div>
+                    </div>
+                    <div class ="second-row">
+                        <button onclick="play()" class="button">GÖNDER</button>
+                        <button onclick="prepare()" class="button retry">SIFIRLA</button>
+                    </div>
+
+                </div>
+            </div> 
+            <div class = "keyboard">
+                <div class="kb-row first-kb-row">
+                    <div onclick="changeKeyboard(this)" class="e kb-button">E</div>
+                    <div onclick="changeKeyboard(this)" class="r kb-button">R</div>
+                    <div onclick="changeKeyboard(this)" class="t kb-button">T</div>
+                    <div onclick="changeKeyboard(this)" class="y kb-button">Y</div>
+                    <div onclick="changeKeyboard(this)" class="u kb-button">U</div>
+                    <div onclick="changeKeyboard(this)" class="ı kb-button">I</div>
+                    <div onclick="changeKeyboard(this)" class="o kb-button">O</div>
+                    <div onclick="changeKeyboard(this)" class="p kb-button">P</div>
+                    <div onclick="changeKeyboard(this)" class="ğ kb-button">Ğ</div>
+                    <div onclick="changeKeyboard(this)" class="ü kb-button">Ü</div>
+                </div>
+                <div class="kb-row second-kb-row">
+                    <div onclick="changeKeyboard(this)" class="a kb-button">A</div>
+                    <div onclick="changeKeyboard(this)" class="s kb-button">S</div>
+                    <div onclick="changeKeyboard(this)" class="d kb-button">D</div>
+                    <div onclick="changeKeyboard(this)" class="f kb-button">F</div>
+                    <div onclick="changeKeyboard(this)" class="g kb-button">G</div>
+                    <div onclick="changeKeyboard(this)" class="h kb-button">H</div>
+                    <div onclick="changeKeyboard(this)" class="j kb-button">J</div>
+                    <div onclick="changeKeyboard(this)" class="k kb-button">K</div>
+                    <div onclick="changeKeyboard(this)" class="l kb-button">L</div>
+                    <div onclick="changeKeyboard(this)" class="ş kb-button">Ş</div>
+                    <div onclick="changeKeyboard(this)" class="i kb-button">İ</div>
+                </div>
+                <div class="kb-row third-kb-row">
+                    <div onclick="changeKeyboard(this)" class="z kb-button">Z</div>
+                    <div onclick="changeKeyboard(this)" class="c kb-button">C</div>
+                    <div onclick="changeKeyboard(this)" class="v kb-button">V</div>
+                    <div onclick="changeKeyboard(this)" class="b kb-button">B</div>
+                    <div onclick="changeKeyboard(this)" class="n kb-button">N</div>
+                    <div onclick="changeKeyboard(this)" class="m kb-button">M</div>
+                    <div onclick="changeKeyboard(this)" class="ö kb-button">Ö</div>
+                    <div onclick="changeKeyboard(this)" class="ç kb-button">Ç</div>
+                    <div onclick="changeKeyboard(this)" class="kb-button">⌫</div>
+                </div>
+            </div> 
+        </div>
+    </div>
+   
+
+   
+</body>
+</html>

@@ -1,11 +1,13 @@
 html {
     scroll-snap-type: y proximity;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
+    overflow-x: hidden;
     width: 100vw;
 }
 
 body {
     padding-top: 50px;
+    overflow-x: hidden;
 }
 
 a {
@@ -13,7 +15,7 @@ a {
     color: white;
 }
 
-.home_cv {
+.home_button {
     background-color: #212529; 
     color: #dadce0; 
     padding: 30px;
@@ -25,7 +27,7 @@ a {
     border-width: 5px;
 }
   
-  .home_cv:hover {
+  .home_button:hover {
     background-color: #dadce0; 
     color: #212529; 
     
@@ -145,12 +147,6 @@ a {
     margin-right: 10px !important;
 }
 
-.skill-name {
-    font-size: 1.3em;
-    font-weight: 500;
-}
-
-
 .card-footer {
     margin-top: 15px;
     border-top: 1px solid rgb(33, 37, 41);
@@ -174,6 +170,18 @@ a {
     transform: scale(1.3);
 }
 
+.skill-box img{
+    height: 10vh; 
+    object-fit: contain;
+}
+
+
+
+.skill-name {
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
 /* Skill Page End */
 /* -------------- */
 
@@ -246,6 +254,8 @@ a {
 /* For Mobile Devices */
 @media (min-width : 319px) and (max-width : 480px) {
 
+    
+
     .home_cv{
         font-size: 1.2em;
         padding: 15px;
@@ -315,6 +325,19 @@ a {
         max-width: 100vw;
     }
 
+    /* .skill-img{
+        height: 8vh; 
+        
+    } */
+
+    .skill-box img{
+        height: 8vh;
+        object-fit: contain;
+    }
+
+    
+    
+
     /* Skill Page End */
     /* -------------- */
 
@@ -359,9 +382,11 @@ a {
         top: 0;
     }
 
-    /* --------------- */
-    /* Home Page Start */
-    
+    .downloadCV{
+        margin-bottom: 50px;
+    }
+
+ 
     .landing-text {
         font-size: 5em;
     }
@@ -406,6 +431,15 @@ a {
         justify-content: space-between;
     }
 
+    .skill-name{
+        font-size: 1.6em;
+    }
+
+    .skill-box img{
+        height: 8vh;
+        object-fit: contain;
+    }
+
     /* Skill Page End */
     /* -------------- */
 
@@ -426,6 +460,10 @@ a {
     }
     /* ---------------- */
     /* Contact Page End */
+
+    .form-control{
+        color: red;
+    }
 }
 
 
