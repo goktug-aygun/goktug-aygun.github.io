@@ -138,14 +138,15 @@ body, html {
     /* background-color: lightblue; */
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    padding: 0px 10px 50px 10px;
+    padding: 0px 10px 150px 10px;
+    /* padding-bottom: 125px; */
 }
 
 
 .kb-row{
     width: 95%;
-    height: 95%;
-    /* background-color: blue; */
+    height: 100%;
+    background-color: blue;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: auto;
@@ -159,7 +160,7 @@ body, html {
     font-size: 24px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    height: 75%;
+    height: 80%;
     margin-top: auto;
     margin-bottom: auto;
 
