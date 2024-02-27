@@ -18,6 +18,36 @@ const wordArray = ["abacı", "abadi", "abalı", "abana", "abani", "abaşo", "aba
 const alphaArray = [100, 101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,199,214,220,231,246,252,286,287,304,305,350,351,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,97,98,99]
 
 
+
+function changeMessage(delay) {
+    setTimeout(function () {
+      if(delay / 1000 == 2){
+        document.getElementsByClassName("message")[0].textContent = "";}
+    }, delay);
+}
+
+function changeTiles(tile, colorCode, delay)
+{
+    var color = null;
+    setTimeout(function () {
+        
+        switch(colorCode)
+        {
+            case "g":
+                color = "rgb(83, 141, 78)"
+                break;
+            case "x":
+                color = "rgb(58, 58, 60)";
+                break;
+            case "y":
+                color = "rgb(234, 179, 8)";
+                break;
+        }
+        tile.style.backgroundColor = color;
+      }, delay);
+}
+
+
 function occCount(word, letter)
 {
     var count = 0;
@@ -183,7 +213,6 @@ function changeKeyboard(clickedElement){
     }
     else
     {
-        // harf ekleme
         var tileToEdit = currentRow.getElementsByClassName("tile")[helpAdd(currentRow)];
         try {
             // virtual keyboard   
@@ -239,8 +268,11 @@ function checkInput(input)
     return 3;
 }
 
-function checkIdx2(inputOccDict, idxDict, occDict, inputRevDict, wordRevDict)
+
+function checkIdx(inputOccDict, idxDict, occDict, inputRevDict, wordRevDict)
 {
+    document.getElementsByClassName("message")[0].textContent = "";
+
     var tiles = currentRow.getElementsByClassName("tile");
     var correctNum = 0;
 
@@ -259,19 +291,13 @@ function checkIdx2(inputOccDict, idxDict, occDict, inputRevDict, wordRevDict)
     {
         var inputCurrLet = inputRevDict[key];
         var wordCurrLet = wordRevDict[key];
-        if(wordCurrLet == inputCurrLet) // dogru yerde dogru harf
+        if(wordCurrLet == inputCurrLet) 
         {
-            tiles[key].style.backgroundColor = "rgb(83, 141, 78)";
             placementArr[key] = "g";
             greenArr.push(inputCurrLet);
 
-            for (var buttonIdx = 0; buttonIdx < buttons.length; buttonIdx++)
-            {
-                if(buttons[buttonIdx].classList.contains(Lower(inputCurrLet)))
-                {
-                    buttons[buttonIdx].style.backgroundColor = "rgb(83, 141, 78)";
-                }
-            }
+            var button = document.getElementsByClassName(Lower(inputCurrLet))[0];
+            button.style.backgroundColor = "rgb(83, 141, 78)";
 
             localInputOccDict[inputCurrLet]--;
             localWordOccDict[wordCurrLet]--;
@@ -283,74 +309,67 @@ function checkIdx2(inputOccDict, idxDict, occDict, inputRevDict, wordRevDict)
         {
             if(! (idxDict.hasOwnProperty(inputCurrLet)))
             {
-                tiles[key].style.backgroundColor = "rgb(58, 58, 60)";
-
                 processed++;
                 
-                for (var buttonIdx = 0; buttonIdx < buttons.length; buttonIdx++)
-                {
-                    if(buttons[buttonIdx].classList.contains(Lower(inputCurrLet)))
-                    {
-                        buttons[buttonIdx].style.backgroundColor = "rgb(58, 58, 60)";
-                    }
-                }
+                var button = document.getElementsByClassName(Lower(inputCurrLet))[0];
+                button.style.backgroundColor = "rgb(58, 58, 60)";
+                placementArr[key] = "x";
             }
             else if(localWordOccDict[inputCurrLet] == 0)
             {                
-                tiles[key].style.backgroundColor = "rgb(58, 58, 60)";
+                placementArr[key] = "x";
                 
-
-                for (var buttonIdx = 0; buttonIdx < buttons.length; buttonIdx++)
-                {
-                    if(buttons[buttonIdx].classList.contains(Lower(inputCurrLet)) && !(greenArr.includes(inputCurrLet) || yellowArr.includes(inputCurrLet)))
-                    {
-                        buttons[buttonIdx].style.backgroundColor = "rgb(58, 58, 60)";
-                    }
-                }
+                var button = document.getElementsByClassName(Lower(inputCurrLet))[0];
+                if(!(greenArr.includes(inputCurrLet) || yellowArr.includes(inputCurrLet)))
+                {button.style.backgroundColor = "rgb(58, 58, 60)";}
                 
                 processed++;
             }
             else{ later++; }
         }
     }
+    
 
-    if(later == 0) { return correctNum; } // all processed
-    else
-    {
-        for(var secondKey in inputRevDict)
+
+    if(later == 0) 
+    {   
+        for(var call = 0; call < 5; call++){changeTiles(tiles[call], placementArr[call], call*150);}
+        if(rowCount == 5 && correctNum != 5){ return -1;}
+        return correctNum; 
+    } 
+
+    for(var secondKey in inputRevDict)
         {
             inputCurrLet = inputRevDict[secondKey];
             if(inputRevDict[secondKey] != wordRevDict[secondKey])
             {
+                var button = document.getElementsByClassName(Lower(inputCurrLet))[0];
                 if(localWordOccDict[inputRevDict[secondKey]] > 0)
                 {
-                    tiles[secondKey].style.backgroundColor = "rgb(234, 179, 8)";
                     localWordOccDict[inputRevDict[secondKey]]--;
-                    for (var buttonIdx = 0; buttonIdx < buttons.length; buttonIdx++)
+                    
+                    placementArr[secondKey] = "y";
+                    
+                    if(!greenArr.includes(inputCurrLet))
                     {
-                        if(buttons[buttonIdx].classList.contains(Lower(inputCurrLet)) && !greenArr.includes(inputCurrLet))
-                        {
-                            buttons[buttonIdx].style.backgroundColor = "rgb(234, 179, 8)";
-                            yellowArr.push(inputCurrLet);
-                        }
-                    }   
+                        button.style.backgroundColor = "rgb(234, 179, 8)";
+                        yellowArr.push(inputCurrLet);
+                    }
+
                 }
                 else
                 {
-                    tiles[secondKey].style.backgroundColor = "rgb(58, 58, 60)";
-                    for (var buttonIdx = 0; buttonIdx < buttons.length; buttonIdx++)
+                    placementArr[secondKey] = "x";
+                    if(!(greenArr.includes(inputCurrLet) || yellowArr.includes(inputCurrLet)))
                     {
-                        if(buttons[buttonIdx].classList.contains(Lower(inputCurrLet)) && !(greenArr.includes(inputCurrLet) || yellowArr.includes(inputCurrLet)))
-                        {
-                            buttons[buttonIdx].style.backgroundColor = "rgb(58, 58, 60)";
-                        }
-                    }     
+                        button.style.backgroundColor = "rgb(58, 58, 60)";
+                    }   
                 }
             }
         }
-    }
-    if(rowCount == 5 && correctNum != 5){return -1; }
-    return correctNum;
+    for(var call = 0; call < 5; call++){changeTiles(tiles[call], placementArr[call], call*150);}
+    if(rowCount == 5 && correctNum != 5){ return -1;}
+    return correctNum; 
     
 }
 
@@ -362,7 +381,6 @@ function prepare()
     clearScreen();
     
     main_word = Upper(wordArray[Math.floor( Math.random() * wordArray.length )]);
-    
     idxDict = createIdxDict(main_word);
     occDict = createOccDict(main_word);    
     revDict = createRevDict(main_word);    
@@ -389,10 +407,12 @@ function play()
 
         switch(checkInput(userInput)) {
             case 1:
-                console.log("Input must have 5 letters in it...");
+                document.getElementsByClassName("message")[0].textContent = `Çok kısa`;
+                for(var i = 0; i < 3; i++){changeMessage(i*1000);}
                 break;
             case 2:
-                console.log("Your input has non-alphabetic characters in it...");
+                document.getElementsByClassName("message")[0].textContent = `Hatalı Karakter...`;   
+                for(var i = 0; i < 3; i++){changeMessage(i*1000);} 
                 break;
             case 3:
                 if(!gameOver)
@@ -400,14 +420,14 @@ function play()
                     
                     if(wordArray.includes(Lower(userInput)))
                     {
-                        var result = checkIdx2(inputOccDict, idxDict, occDict, inputRevDict, revDict);
+                        var result = checkIdx(inputOccDict, idxDict, occDict, inputRevDict, revDict);
                         currentRow = rows[++rowCount];
                         if(result == userInput.length)
                         {
                             document.getElementsByClassName("message")[0].textContent = `Tebrikler. Kazandın`;
                             gameOver=true;
                         }
-                        else if(result == -1)
+                        else if(rowCount == 6)
                         {
                             document.getElementsByClassName("message")[0].textContent = `Kaybettin. Gizli kelime ${main_word} idi`
                             gameOver=true;
@@ -417,6 +437,7 @@ function play()
                     else
                     {
                         document.getElementsByClassName("message")[0].textContent = `Listemizde \"${userInput}\" kelimesi yok`;
+                        for(var i = 0; i < 3; i++){changeMessage(i*1000);}
                     }  
                     break;
                 }
@@ -441,8 +462,6 @@ addEventListener("DOMContentLoaded", (event) => {
     
     rows = document.getElementsByClassName("row");
     buttons = document.getElementsByClassName("kb-button")
-    // console.log("    " + rows.length);
     prepare(); // start running
-    // console.log(document.getElementsByClassName("message")[0].textContent);
 
 });
