@@ -180,8 +180,7 @@ body, html {
 
 .tile{
     display: flex;
-    font-size: 30px;
-    /* text-align: center; */
+    font-size: 24px;
     align-items: center;
     justify-content: center;
     color: rgb(255, 255, 255);
