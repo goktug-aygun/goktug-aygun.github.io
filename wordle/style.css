@@ -187,6 +187,8 @@ body, html {
     font-family: "Nunito Sans", "Times New Roman";
 }
 
+
+
 @media (min-width : 319px) and (max-width : 480px) /* For Mobile Devices */
 {
     .tile

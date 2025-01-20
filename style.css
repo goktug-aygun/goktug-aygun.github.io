@@ -1,6 +1,6 @@
 html {
     scroll-snap-type: y proximity;
-    
+
     width: 100vw;
 }
 
@@ -17,8 +17,8 @@ a {
 }
 
 .home_button {
-    background-color: #212529; 
-    color: #dadce0; 
+    background-color: #212529;
+    color: #dadce0;
     padding: 30px;
     border-radius: 30px 30px 30px 30px;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -27,28 +27,28 @@ a {
     border-color: #212529;
     border-width: 5px;
 }
-  
-  .home_button:hover {
-    background-color: #dadce0; 
-    color: #212529; 
-    
-  }
 
-  .btn{
+.home_button:hover {
+    background-color: #dadce0;
+    color: #212529;
+
+}
+
+.btn {
     position: relative;
     min-height: 40px;
-  }
-  
-  .btn a{
-    display: block; 
-    width: 100%;     
-    height: 100%;    
+}
+
+.btn a {
+    display: block;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     text-align: center;
     line-height: 40px;
-  }
+}
 
 .navbar {
     opacity: 0.9;
@@ -65,10 +65,11 @@ a {
     position: relative;
 }
 
-.even{
+.even {
     background-color: #EEF0F5;
 }
-.odd{
+
+.odd {
     background-color: #dadce0;
 }
 
@@ -153,6 +154,27 @@ a {
     border-top: 1px solid rgb(33, 37, 41);
 }
 
+.project-card p {
+    margin-bottom: auto;
+}
+
+.image-wrapper {
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-wrapper {
+    min-height: 150px;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 /* Project Page End */
 /* ---------------- */
 
@@ -171,8 +193,8 @@ a {
     transform: scale(1.3);
 }
 
-.skill-box img{
-    height: 10vh; 
+.skill-box img {
+    height: 10vh;
     object-fit: contain;
 }
 
@@ -183,6 +205,7 @@ a {
     font-weight: 500;
     margin-bottom: 20px;
 }
+
 /* Skill Page End */
 /* -------------- */
 
@@ -191,11 +214,11 @@ a {
 
 
 /* Toaster */
-#contact-page{
+#contact-page {
     padding-bottom: 150px !important;
 }
 
-#toast-box{
+#toast-box {
     position: absolute;
     bottom: 30px;
     right: 30px;
@@ -206,7 +229,7 @@ a {
     padding: 20px;
 }
 
-#toast-box .toast{
+#toast-box .toast {
     width: 300px;
     height: 80px;
     background-color: white;
@@ -218,10 +241,10 @@ a {
     color: black;
     z-index: 12;
     position: relative;
-    animation: fadeIn 0.25s linear forwards, fadeOut 0.25s 2.75s linear forwards; 
+    animation: fadeIn 0.25s linear forwards, fadeOut 0.25s 2.75s linear forwards;
 }
 
-#toast-box .toast::after{
+#toast-box .toast::after {
     content: "";
     position: absolute;
     left: 0;
@@ -231,19 +254,22 @@ a {
     animation: anim 3s linear forwards;
 }
 
-#toast-box .toast.invalid::after{
+#toast-box .toast.invalid::after {
     background: orange;
 }
 
-#toast-box .toast.valid::after{
+#toast-box .toast.valid::after {
     background: green;
 }
 
 
-#toast-box .toast i{
+#toast-box .toast i {
     margin: 0px 10px;
     font-size: 2rem;
 }
+
+
+
 
 
 /* Contact Page End */
@@ -255,9 +281,9 @@ a {
 /* For Mobile Devices */
 @media (min-width : 319px) and (max-width : 480px) {
 
-    
 
-    .home_cv{
+
+    .home_cv {
         font-size: 1.2em;
         padding: 15px;
     }
@@ -273,7 +299,7 @@ a {
 
     /* Welcome Page Start */
     /* ------------------ */
-    
+
     .landing-box {
         justify-content: center;
     }
@@ -286,7 +312,7 @@ a {
         font-size: 2em;
 
     }
-    
+
     /* Welcome Page End */
     /* ---------------- */
 
@@ -311,9 +337,10 @@ a {
     .me-box {
         margin-top: 1.5vh;
     }
+
     /* About Me Page End */
     /* ----------------- */
-    
+
 
     .welcome-box {
         margin-top: 10vh;
@@ -321,7 +348,7 @@ a {
 
     /* ---------------- */
     /* Skill Page Start */
-    
+
     .skill-container {
         max-width: 100vw;
     }
@@ -331,25 +358,25 @@ a {
         
     } */
 
-    .skill-box img{
+    .skill-box img {
         height: 8vh;
         object-fit: contain;
     }
 
-    
-    
+
+
 
     /* Skill Page End */
     /* -------------- */
 
     /* Contact Page Start */
     /* ------------------ */
-    
-    #contact-page{
+
+    #contact-page {
         padding-bottom: 50px !important;
     }
 
-    #toast-box{
+    #toast-box {
         width: 100%;
         right: 0;
         left: 0;
@@ -357,8 +384,8 @@ a {
         /* background-color: rgba(255, 0, 0, 0.2); */
     }
 
-    #toast-box .toast{
-        width: 100%;      
+    #toast-box .toast {
+        width: 100%;
     }
 
     /* ---------------- */
@@ -383,11 +410,11 @@ a {
         top: 0;
     }
 
-    .downloadCV{
+    .downloadCV {
         margin-bottom: 50px;
     }
 
- 
+
     .landing-text {
         font-size: 5em;
     }
@@ -432,11 +459,11 @@ a {
         justify-content: space-between;
     }
 
-    .skill-name{
+    .skill-name {
         font-size: 1.6em;
     }
 
-    .skill-box img{
+    .skill-box img {
         height: 8vh;
         object-fit: contain;
     }
@@ -446,23 +473,24 @@ a {
 
     /* Contact Page Start */
     /* ------------------ */
- 
 
-    #toast-box{
+
+    #toast-box {
         width: 100%;
         right: 0;
         left: 0;
         bottom: 0;
     }
 
-    #toast-box .toast{
+    #toast-box .toast {
         width: 100%;
-        font-size: 1.5em;      
+        font-size: 1.5em;
     }
+
     /* ---------------- */
     /* Contact Page End */
 
-    .form-control{
+    .form-control {
         color: red;
     }
 }
@@ -472,26 +500,28 @@ a {
 
 /* Animations */
 
-@keyframes anim{
-    100%{
+@keyframes anim {
+    100% {
         width: 0%;
     }
 }
 
-@keyframes fadeIn{
-    0%{
+@keyframes fadeIn {
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 100%;
     }
 }
 
-@keyframes fadeOut{
-    100%{
+@keyframes fadeOut {
+    100% {
         opacity: 0;
     }
-    0%{
+
+    0% {
         opacity: 100%;
     }
 }
