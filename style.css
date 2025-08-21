@@ -316,94 +316,19 @@ a {
 /* For Mobile Devices */
 @media (min-width : 319px) and (max-width : 480px) {
 
-
-
-    .home_cv {
-        font-size: 1.2em;
-        padding: 15px;
-    }
-
     html {
         scroll-snap-type: none;
-    }
-
-    .navbar {
-        position: fixed !important;
-        top: 0 !important;
     }
 
     /* Welcome Page Start */
     /* ------------------ */
 
-    .landing-box {
-        justify-content: center;
-    }
-
-    .lead {
-        font-size: 1em;
-    }
-
     .landing-text {
         font-size: 2em;
-
     }
 
     /* Welcome Page End */
     /* ---------------- */
-
-    /* ----------------- */
-    /* About Me Page Start */
-    .me-img {
-        width: 80%;
-    }
-
-    .me-box {
-        justify-content: space-between;
-    }
-
-    .me-box span {
-        font-size: 1em;
-    }
-
-    .me-text {
-        text-align: center;
-    }
-
-    .me-box {
-        margin-top: 1.5vh;
-    }
-
-    .carousel-item {
-        height: 400px;
-        /* background-color: red; */
-        /* carousel yüksekliği */
-    }
-
-    .carousel-item img {
-        height: 100%;
-        /* carousel-item yüksekliğini doldur */
-        width: 100%;
-        /* yatay olarak da doldur */
-        object-fit: contain;
-        /* kırpma ile kapsayıcıyı doldur */
-    }
-
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        background-color: black;
-        opacity: 0.5;
-
-    }
-
-
-    /* About Me Page End */
-    /* ----------------- */
-
-
-    .welcome-box {
-        margin-top: 10vh;
-    }
 
     /* ---------------- */
     /* Skill Page Start */
@@ -412,49 +337,10 @@ a {
         max-width: 100vw;
     }
 
-    /* .skill-img{
-        height: 8vh; 
-        
-    } */
-
-    .skill-box img {
-        height: 8vh;
-        object-fit: contain;
-    }
-
-
-
-
     /* Skill Page End */
     /* -------------- */
 
-    /* Contact Page Start */
-    /* ------------------ */
-
-    #contact-page {
-        padding-bottom: 50px !important;
-    }
-
-    #toast-box {
-        width: 100%;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        /* background-color: rgba(255, 0, 0, 0.2); */
-    }
-
-    #toast-box .toast {
-        width: 100%;
-    }
-
-    /* ---------------- */
-    /* Contact Page End */
 }
-
-
-
-
-
 
 /* Animations */
 
