@@ -117,18 +117,13 @@ a {
 
 .carousel-item {
     height: 400px;
-    /* background-color: red; */
-    /* carousel yüksekliği */
 }
 
 .carousel-item img {
     height: 100%;
-    /* carousel-item yüksekliğini doldur */
-    position: relative;
     width: 100%;
-    /* yatay olarak da doldur */
+    position: relative;
     object-fit: contain;
-    /* kırpma ile kapsayıcıyı doldur */
     z-index: 1;
 }
 
@@ -137,7 +132,6 @@ a {
 .carousel-control-next {
     background-color: black;
     opacity: 0.7;
-    /* height: 20%; */
 
 }
 
@@ -154,7 +148,6 @@ a {
     pointer-events: none;
     filter: blur(8px);
     /* px değerini isteğe göre artırıp azaltabilirsin */
-    /* butonlar veya tıklamalar için engelleme */
 }
 
 
