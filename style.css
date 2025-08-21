@@ -1,13 +1,11 @@
 html {
     scroll-snap-type: y proximity;
-
     width: 100vw;
 }
 
 body {
     padding-top: 50px;
     overflow-x: hidden;
-
     overflow-y: scroll;
 }
 
@@ -454,107 +452,6 @@ a {
 }
 
 
-/* For Tablets */
-@media (min-width : 480px) and (max-width: 825px) {
-    html {
-        scroll-snap-type: none;
-    }
-
-    .navbar-brand,
-    .nav-link,
-    .dropdown-item {
-        font-size: 1.5em;
-    }
-
-    .navbar {
-        position: fixed;
-        top: 0;
-    }
-
-    .downloadCV {
-        margin-bottom: 50px;
-    }
-
-
-    .landing-text {
-        font-size: 5em;
-    }
-
-    .landing-box {
-        justify-content: center;
-    }
-
-    /* Home Page End */
-    /* ------------------- */
-
-    /* ------------------- */
-    /* About Me Page Start */
-    .me-text {
-        text-align: center;
-    }
-
-    .me-box {
-        margin-top: 3vh;
-    }
-
-    .me-box span {
-        font-size: 1.5em;
-    }
-
-    .wrapper img {
-        width: 80%;
-    }
-
-    .card-img-top {
-        max-height: 10vh;
-        max-height: 15vh;
-    }
-
-    /* About Me Page End */
-    /* ----------------- */
-
-    /* ---------------- */
-    /* Skill Page Start */
-    .skill-list {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .skill-name {
-        font-size: 1.6em;
-    }
-
-    .skill-box img {
-        height: 8vh;
-        object-fit: contain;
-    }
-
-    /* Skill Page End */
-    /* -------------- */
-
-    /* Contact Page Start */
-    /* ------------------ */
-
-
-    #toast-box {
-        width: 100%;
-        right: 0;
-        left: 0;
-        bottom: 0;
-    }
-
-    #toast-box .toast {
-        width: 100%;
-        font-size: 1.5em;
-    }
-
-    /* ---------------- */
-    /* Contact Page End */
-
-    .form-control {
-        color: red;
-    }
-}
 
 
 
