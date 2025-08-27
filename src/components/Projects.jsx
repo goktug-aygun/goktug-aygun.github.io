@@ -1,6 +1,6 @@
 import Card from "./Card";
 
-const image_path = "src/assets/images/projects/";
+const image_path = "/images/projects/";
 
 export default function Projects({ source }) {
   return (
