@@ -1,0 +1,211 @@
+{
+  "navbar": {
+    "name":"Goktug Aygun",
+    "home-btn": "Home",
+    "about-me-btn": "About Me",
+    "projects-exp-bnt": "Projects and Experience",
+    "skills-btn": "Skills / CV",
+    "contact-btn": "Reach Me",
+    "contact-github": "Github Profile",
+    "contact-linkedin": "Linkedin Profile",
+    "contact-page": "Get in Contact"
+  },
+  "home-pg": {
+    "landing-text": "Hey! It's Goktug.",
+    "cv-btn": "Get My CV Here!"
+  },
+  "about-pg": {
+    "title": "About Me",
+    "desc": "Hi there! I am Goktug Aygun, a Computer Science and Engineering graduate from Sabancı University and currently pursuing my Master's degree at KU Leuven. I am specializing in Artificial Intelligence and Machine Learning, and I am eager to apply my expertise by contributing to innovative projects. My main objective is to gain further experience by taking on roles in diverse teams and projects. With a keen interest in internship opportunities, I aim to continue developing my skills and knowledge in cutting-edge technological solutions."
+  },
+  "projects-pg": {
+    "title": "Projects and Experience",
+    "desc": "Here are some of the projects to which I have contributed. During these projects, I was able to practice technical skills besides improving my social abilities. There are many more great projects to come...",
+    "cards":[
+    {
+        "id": "master-leuven",
+        "title": "Master's Education at KU Leuven",
+        "desc": "I am pursuing my Master's Degree at KU Leuven with a strong focus on Artificial Intelligence and Machine Learning. I am eager to sharpen my skills and improve my expertise by contributing to projects and research in these fields. My goal is to apply AI-driven approaches to real-world problems and develop efficient, impactful solutions.",
+        "btn": "",
+        "href" : "",
+        "target" : "",
+        "date": "Sep. 2025 - Exp. Jun. 2027",
+        "image":"master-leuven.png"
+    },
+    {
+        "id": "sabanci-curricula",
+        "title": "Analyzing Sabancı University Curricula in Relation to the SDGs",
+        "desc": "In this project, I am evaluating the correlation between university curricula and Sustainable Development Goals of United Nations using Large Language Models and Python with Dr. Husnu Yenigun.",
+        "btn": "",
+        "href" : "",
+        "target" : "",
+        "date": "Nov. 2024 - Jun. 2025",
+        "image":"sdg_sabancı.png"
+    },
+    {
+        "id": "ens-rag",
+        "title": "LLM-based Course Assistant RAG Application",
+        "desc": "This is my graduation project. I worked with a team of 4 to create a RAG application. This application incentivizes the engagement of students with the course material. It utilizes LLaMA Large Language Model of Meta and aims to help students and assistants.",
+        "btn": "",
+        "href" : "",
+        "target" : "",
+        "date": "Sep. 2024 - Jun. 2025",
+        "image":"llama-meta-491.png"
+    },
+    {
+        "id": "obss-intern",
+        "title": "C# .NET Mandatory Internship at OBSS",
+        "desc": "This is a project where I did for my mandatory internship. In this project I utilized C# .NET and React for the development of a website project covering both back-end and front-end. It provides authorization, authentication and HTTP request structure.",
+        "btn": "",
+        "href" : "",
+        "target" : "",
+        "date": "Summer 2024",
+        "image":"obss.png"
+    },
+    {
+        "id": "flightroster-cs308",
+        "title": "FlightRoster - Aviation Upgraded",
+        "desc": "This web application is developed by a team of 10 using different tech-stacks. It is used to manage data and operations of an imaginary airline company.",
+        "btn": "Visit Github Page",
+        "href" : "https://github.com/goktug-aygun/CS308-Project",
+        "target" : "_blank",
+        "date": "Spring 2024",
+        "image":"github.webp"
+    },
+    {
+        "id": "wordle",
+        "title": "Wordle",
+        "desc": "I built a clone of the game \"Wordle\" using HTML, CSS, Javascript and Python. Remember that the words in the database are in Turkish.",
+        "btn": "Play Now!",
+        "href" : "https://goktugaygun.com/wordle/index.html",
+        "target" : "_blank",
+        "date": "Feb. 2024",
+        "image":"wordle.png"
+    },
+    {
+        "id": "website",
+        "title": "This Website",
+        "desc": "I built this website using mainly HTML, CSS and Bootstrap. I would love to hear your feedbacks. Do not forget to check contact page.",
+        "btn": "Visit Contact Page",
+        "href" : "",
+        "target" : "",
+        "date": "Jun. - Jul. 2023",
+        "image":"welcome.png"
+    },
+    {
+        "id": "studyBuddy-cs310",
+        "title": "StudyBuddy Mobile App - Connecting Students for Collaborative Learning",
+        "desc": "This mobile application is developed to make it possible for students who are studying similar courses to gather and communicate easily.",
+        "btn": "Visit Github Page",
+        "href" : "https://github.com/goktug-aygun/CS310_Mobile_Application",
+        "target" : "_blank",
+        "date": "Fall 2023",
+        "image":"github.webp"
+    },
+    {
+        "id": "diSUcord-cs408",
+        "title": "DiSUCord - Message Networking via Channels",
+        "desc": "IThis project imititates the well-known application Discord, using TCP sockets to provide communication medium for different users.",
+        "btn": "Visit Github Page",
+        "href" : "https://github.com/goktug-aygun/CS408-Project",
+        "target" : "_blank",
+        "date": "Fall 2023",
+        "image":"github.webp"
+    },
+    {
+        "id": "analysis-cs210",
+        "title": "Analysis of Female MP's in Turkish Assembly",
+        "desc": "This is a project that I have developed with a team of 5. Our main objective was to investigate gender inequalityin the parliament.",
+        "btn": "Visit Github Page",
+        "href" : "http://github.com/goktug-aygun/CS210-Project",
+        "target" : "_blank",
+        "date": "Spring 2023",
+        "image":"github.webp"
+    },
+    {
+        "id": "deathDB-cs306",
+        "title": "Deaths Around the World by Cause Database App",
+        "desc": "This project was developed by 5 students in order to discover insights from real world data using processing techniques, MySQL, data visualization tools.",
+        "btn": "Visit Github Page",
+        "href" : "https://github.com/goktug-aygun/CS306-Project",
+        "target" : "_blank",
+        "date": "Spring 2023",
+        "image":"github.webp"
+    },
+    {
+        "id": "la-cs201",
+        "title": "Learning Assistant for Introduction to Computing",
+        "desc": "This is a course in Sabancı University that utilizes C++. I worked as a member of a team of 26 in order to organize course content.",
+        "btn": "",
+        "href" : "",
+        "target" : "",
+        "date": "Spring 2023",
+        "image":"cs201.png"
+    },
+    {
+        "id": "mktg-member",
+        "title": "Marketing and Institutional Communications Team Member",
+        "desc": "This is a team of more than 70 people. I deliver presentation and give speeches about Sabancı University. As a team of university students, we direct events for high school students.",
+        "btn": "",
+        "href" : "",
+        "target" : "",
+        "date": "Sep. 2022 - Jun. 2025",
+        "image":"sabanci.png"
+    },
+    {
+        "id": "la-if100",
+        "title": "Learning Assistant for Computational Approaches to Problem Solving",
+        "desc": "This course in Sabancı University uses Python. It introduces students to concepts such as computational thinking or algorithm development. I was one of 26 members of the team that shaped the methodology of the course.",
+        "btn": "",
+        "href" : "",
+        "target" : "",
+        "date": "Fall 2022, Fall 2023",
+        "image":"if100.png"
+    },
+    {
+        "id": "su-mentor",
+        "title": "Sabancı University Summer High School Mentor",
+        "desc": "I worked with a team of 25 to organize events and help high school students adapt to campus life. I also took role in organization team to learn what happens behind the scenes.",
+        "btn": "View More",
+        "href" : "https://gazetesu.sabanciuniv.edu/tr/lise-yaz-okullari-bu-yil-1913-ogrenciye-ulasti",
+        "target" : "_blank",
+        "date": "Jun. - Aug. 2022",
+        "image":"su-mentor.png"
+    },
+    {
+        "id": "finartz-intern",
+        "title": "Project Intern at Finartz",
+        "desc": "This is a voluntary internship for 2 weeks. I learnt more about project development individually and as a part of a team.",
+        "btn": "",
+        "href" : "",
+        "target" : "",
+        "date": "Feb. 2022",
+        "image":"finartz.png"
+    }
+    ]
+    
+  },"skills-pg": {
+    "title": "Skills / CV",
+    "desc": "Below are some of the programming languages and tools that I practiced with various projects and studies.",
+    "pl-subtitle": "Programming Languages",
+    "tf-subtitle": "Technologies/Frameworks",
+    "cv-pre": "You can find my curriculum vitae (CV)",
+    "cv-anchor": "here",
+    "cv-post": "as well."    
+  }
+  ,"contact-pg": {
+    "title": "Contact",
+    "desc": "Please feel free to reach out if you have any questions. I would love to hear your feedbacks.",
+    "name-box": "Your Name",
+    "email-box": "Your Email",
+    "phone-number-box": "Your Phone Number (Not Required)",
+    "msg-box": "Your Message",
+    "warnings": {
+        "name_warning" : "Please write your name.",
+        "mail_warning" : "Please write your email.",
+        "msg_warning" : "Please write your message.",
+        "valid_warning" : "Thank you for your mail! I will get back to you soon."
+    },
+    "send-btn": "Send"
+  }
+}

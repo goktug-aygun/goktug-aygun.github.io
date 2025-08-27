@@ -1,27 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import Projects from "./components/Projects";
 
-import Card from "./components/Card";
-
+// Language Files
+import en from "./locales/en.json";
+import tr from "./locales/tr.json";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { i18n } = useTranslation();
+  // English is the default language
+  const [language, setLanguage] = useState("en");
+
+  const resources = { en, tr };
+  const projectsObj = resources[language]["projects-pg"]["cards"];
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
-    <>
-       <div className="row">
-      <Card
-        title="Master's Education at KU Leuven"
-        image="src/assets/images/projects/KU_Leuven_logo.png"
-        description="I am pursuing my Master's Degree at KU Leuven with a strong focus on Artificial Intelligence and Machine Learning. I am eager to sharpen my skills and improve my expertise by contributing to projects and research in these fields. My goal is to apply AI-driven approaches to real-world problems and develop efficient, impactful solutions."
-        buttonText="Learn More"
-        interval="Sep. 2025 - Exp. Jun. 2027"
-      />
-    </div>      
-    </>
-  )
+    <div>
+      <Projects source={projectsObj} />
+    </div>
+  );
 }
 
-export default App
+export default App;
