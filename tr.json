@@ -1,0 +1,142 @@
+{
+  "navbar": {
+    "name":"Göktuğ Aygün",
+    "home-btn": "Ana Sayfa",
+    "about-me-btn": "Hakkımda",
+    "projects-exp-bnt": "Projelerim ve Tecrübem",
+    "skills-btn": "Yeteneklerim / CV",
+    "contact-btn": "İletişim",
+    "contact-github": "Github Profili",
+    "contact-linkedin": "Linkedin Profili",
+    "contact-page": "İletişime Geçin"
+  },
+  "home-pg": {
+    "landing-text": "Selam! Ben Göktuğ.",
+    "cv-btn": "CV'me Bakın!"
+  },
+  "about-pg": {
+    "title": "Hakkımda",
+    "desc": "Merhaba! Ben Göktuğ Aygün, Sabancı Üniversitesi Bilgisayar Bilimi ve Mühendisliği mezunuyum ve şu anda KU Leuven’de yüksek lisans eğitimime devam ediyorum. Yapay Zeka ve Makine Öğrenimi alanında uzmanlaşmaktayım ve bu uzmanlığımı yenilikçi projelere katkıda bulunarak uygulamayı arzuluyorum. Temel amacım, çeşitli ekiplerde ve projelerde yer alarak deneyim kazanmak. Staj fırsatlarına özel bir ilgim bulunmakta olup, en son teknolojik çözümler alanında becerilerimi ve bilgimi geliştirmeye devam etmeyi hedefliyorum."
+  },"projects-pg": {
+    "title": "Projelerim ve Tecrübelerim",
+    "desc": "İşte katkıda bulunduğum bazı projeler. Bu projelerde, sosyal becerilerimi geliştirmeye ek olarak teknik yeteneklerimi de uygulama fırsatı buldum. Daha birçok harika projenin geleceğine inanıyorum...",
+    "cards":{
+    "master-leuven": {
+        "title": "KU Leuven'de Yüksek Lisans Eğitimi",
+        "desc": "KU Leuven'de Yapay Zeka ve Makine Öğrenimi alanında yoğunlaşarak Yüksek Lisans eğitimime devam ediyorum. Bu alanlardaki projelere ve araştırmalara katkıda bulunarak becerilerimi geliştirmeyi ve uzmanlığımı ilerletmeyi hedefliyorum. Amacım, yapay zekâ odaklı yaklaşımları gerçek dünya problemlerine uygulamak ve etkili çözümler geliştirmek.",
+        "btn": "",
+        "date": "Eyl. 2025 - Tahm. Haz. 2027"
+    },
+    "sabanci-curricula": {
+        "title": "Sabancı Üniversitesi Müfredatını Sürdürülebilir Kalkınma Hedefleri ile Analiz Etme",
+        "desc": "Bu projede, üniversite müfredatı ile Birleşmiş Milletler'in Sürdürülebilir Kalkınma Hedefleri arasındaki ilişkiyi Büyük Dil Modelleri ve Python kullanarak Dr. Hüsnü Yenigün ile birlikte değerlendiriyorum.",
+        "btn": "",
+        "date": "Kas. 2024 - Haz. 2025"
+    },
+    "ens-rag": {
+        "title": "LLM Tabanlı Ders Asistanı RAG Uygulaması",
+        "desc": "Bu benim mezuniyet projem. 4 kişilik bir ekiple bir RAG uygulaması geliştirdik. Bu uygulama, öğrencilerin ders materyalleriyle etkileşimini teşvik etmeyi amaçlıyor. Meta'nın LLaMA Büyük Dil Modeli kullanıdık ve öğrenciler ile asistanlara yardımcı olmayı hedefliyor.",
+        "btn": "",
+        "date": "Eyl. 2024 - Haz. 2025"
+    },
+    "obss-intern": {
+        "title": "OBSS'de Zorunlu C# .NET Stajı",
+        "desc": "Bu proje, benim zorunlu stajım. Projede, hem back-end hem front-end geliştirmek için C# .NET ve React kullandım. Proje, yetkilendirme, kimlik doğrulama ve HTTP istek yapılarını barındırıyor.",
+        "btn": "",
+        "date": "Yaz 2024"
+    },
+    "flightroster-cs308": {
+        "title": "FlightRoster - Havacılık Güncellemesi",
+        "desc": "Bu web uygulaması, 10 kişilik bir ekip tarafından farklı teknolojiler kullanılarak geliştirildi. Hayali bir havayolu şirketinin veri ve operasyonlarını yönetmek için kullanılıyor.",
+        "btn": "Github Sayfasını Ziyaret Et",
+        "date": "Bahar 2024"
+    },
+    "wordle": {
+        "title": "Wordle",
+        "desc": "\"Wordle\" oyununun bir klonunu HTML, CSS, Javascript ve Python kullanarak geliştirdim. Veritabanındaki kelimeler Türk Dil Kurumu'ndan alınmıştır.",
+        "btn": "Şimdi Oyna!",
+        "date": "Şub. 2024"
+    },
+    "website": {
+        "title": "Bu Web Sitesi",
+        "desc": "Bu web sitesini ağırlıklı olarak HTML, CSS ve Bootstrap kullanarak oluşturdum. Görüşlerinizi duymayı çok isterim. İletişim sayfasını ziyaret etmeyi unutmayın.",
+        "btn": "İletişim Sayfasını Ziyaret Et",
+        "date": "Haz. - Tem. 2023"
+    },
+    "studyBuddy-cs310": {
+        "title": "StudyBuddy Mobil Uygulaması - Öğrencileri İşbirliğine Bağlama",
+        "desc": "Bu mobil uygulama, benzer dersleri alan öğrencilerin bir araya gelip kolayca iletişim kurabilmesini sağlamak amacıyla geliştirildi.",
+        "btn": "Github Sayfasını Ziyaret Et",
+        "date": "Güz 2023"
+    },
+    "diSUcord-cs408": {
+        "title": "DiSUCord - Kanallar Arası Mesajlaşma",
+        "desc": "Bu proje, popüler uygulama Discord'u taklit ederek TCP soketleri kullanıyor ve farklı kullanıcılar için iletişim ortamı sağlıyor.",
+        "btn": "Github Sayfasını Ziyaret Et",
+        "date": "Güz 2023"
+    },
+    "analysis-210": {
+        "title": "Türkiye Büyük Meclisindeki Kadın Milletvekillerinin Analizi",
+        "desc": "Bu projeyi 5 kişilik bir ekiple geliştirdik. Temel amacımız, parlamentoda cinsiyet eşitsizliğini araştırmaktı.",
+        "btn": "Github Sayfasını Ziyaret Et",
+        "date": "Bahar 2023"
+    },
+    "la-cs201": {
+        "title": "Bilgisayara Giriş Dersinde Öğrenim Asistanlığı",
+        "desc": "Bu, Sabancı Üniversitesi'nde C++ kullanılan bir derstir. Ders içeriğini düzenlemek için 26 kişilik bir ekibin parçası olarak çalıştım.",
+        "btn": "",
+        "date": "Bahar 2023"
+    },
+    "mktg-member": {
+        "title": "Pazarlama ve Kurumsal İletişim Ekibi Üyesi",
+        "desc": "70'ten fazla kişiden oluşan bir ekipte yer aldım. Sabancı Üniversitesi hakkında sunumlar yaptım ve konuşmalar gerçekleştirdım. Üniversite öğrencilerinden oluşan bir ekip olarak lise öğrencilerine yönelik etkinlikler düzenledik.",
+        "btn": "",
+        "date": "Eyl. 2022 - Haz. 2025"
+    },
+    "la-if100": {
+        "title": "Problem Çözmeye Hesaplamalı Yaklaşımlar Dersinde Öğrenim Asistanlığı",
+        "desc": "Bu Sabancı Üniversitesi dersinde Python kullanılıyor. Ders, öğrencilere hesaplamalı düşünme ve algoritma geliştirme gibi kavramları tanıtıyor. Dersin metodolojisini şekillendiren 26 kişilik ekibin bir üyesiydim.",
+        "btn": "",
+        "date": "Güz 2022, Güz 2023"
+    },
+    "su-mentor": {
+        "title": "Sabancı Üniversitesi Yaz Lisesi Mentoru",
+        "desc": "25 kişilik bir ekiple çalışarak etkinlikler düzenledim ve lise öğrencilerinin kampüs hayatına uyum sağlamasına yardımcı oldum. Ayrıca organizasyon ekibinde yer alarak sahne arkasında neler olduğunu öğrendim.",
+        "btn": "Daha Fazla Gör",
+        "date": "Haz. - Ağu. 2022"
+    },
+    "finartz-intern": {
+        "title": "Finartz'de Proje Stajyeri",
+        "desc": "Bu, 2 haftalık gönüllü bir staj programı. Bireysel olarak ve ekip içinde proje geliştirme konusunda daha fazla deneyim kazandım.",
+        "btn": "",
+        "date": "Şub. 2022"
+    }
+}
+
+    
+  },"skills-pg": {
+    "title": "Yeteneklerim / CV",
+    "desc": "Aşağıda, çeşitli projeler ve çalışmalarla deneyim kazandığım bazı programlama dilleri ve araçlar bulunmaktadır.",
+    "pl-subtitle": "Programlama Dilleri",
+    "tf-subtitle": "Teknolojiler / Frameworkler",
+    "cv-pre": "Özgeçmişime (CV) ",
+    "cv-anchor": "buradan da",
+    "cv-post": " ulaşabilirsiniz."
+},
+"contact-pg": {
+    "title": "İletişim",
+    "desc": "Herhangi bir sorunuz olursa benimle iletişime geçmekten çekinmeyin. Görüşlerinizi duymayı çok isterim",
+    "name-box": "Adınız",
+    "email-box": "E-posta Adresiniz",
+    "phone-number-box": "Telefon Numaranız (Opsiyonel)",
+    "msg-box": "Mesajınız",
+    "warnings": {
+        "name_warning": "Lütfen adınızı yazınız.",
+        "mail_warning": "Lütfen e-posta adresinizi yazınız.",
+        "msg_warning": "Lütfen mesajınızı yazınız.",
+        "valid_warning": "Mesajınız için teşekkürler! En kısa sürede size dönüş yapacağım."
+    },
+    "send-btn": "Gönder"
+}
+
+}
