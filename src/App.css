@@ -40,3 +40,58 @@
 .read-the-docs {
   color: #888;
 }
+
+
+
+.project-card {
+    border: 1px solid rgb(33, 37, 41);
+    border-radius: 4px;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.5);
+    transition: transform 0.15s;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+}
+
+.lead {
+    font-size: 1.6em;
+}
+
+.project-card h4,
+.project-card p {
+    color: rgb(33, 37, 41);
+}
+
+.interval {
+    margin: 10px 0 0 0 !important;
+}
+
+.navbar-toggler {
+    margin-right: 10px !important;
+}
+
+.card-footer {
+    margin-top: 15px;
+    border-top: 1px solid rgb(33, 37, 41);
+}
+
+.project-card p {
+    margin-bottom: auto;
+}
+
+.image-wrapper {
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-wrapper {
+    min-height: 150px;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+}
