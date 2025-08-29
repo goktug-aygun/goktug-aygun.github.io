@@ -59,7 +59,7 @@ export default function AboutMePage() {
         </div>
 
         <div className="landing-box col-xl-6 py-3 py-md-5 d-flex align-items-start">
-          <span className="me-text px-3 px-md-5">
+          <span className="lead px-3 px-md-5">
             Hi there! I am Goktug Aygun, a Computer Science and Engineering
             graduate from Sabancı University and currently pursuing my Master's
             degree at KU Leuven. I am specializing in Artificial Intelligence

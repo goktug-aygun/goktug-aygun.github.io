@@ -37,7 +37,7 @@ export default function SkillsPage() {
     <section id="skills-page" className="page">
       <div className="even min-vh-100 d-flex flex-column">
         <h1 className="page-title">Skills / CV</h1>
-        <p>
+        <p className="lead">
           Below are some of the programming languages and tools that I practiced
           with various projects and studies.
         </p>
@@ -48,7 +48,7 @@ export default function SkillsPage() {
             title={"Frameworks & Libraries & Technologies"}
           />
         </div>
-        <p>
+        <p className="lead">
           You find my Curriculum Vitae (CV){" "}
           <a className="downloadCV" href="Goktug_Aygun_CV.pdf" target="_blank">
             here

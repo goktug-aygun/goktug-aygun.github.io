@@ -19,9 +19,6 @@ body {
   padding: 0;
 }
 
-.lead {
-  font-size: 1.6em;
-}
 
 .form-label{
   padding-left: 30px !important; 
@@ -236,5 +233,22 @@ section{
 .no-bg-change:focus  {
   background-color: inherit !important; 
   box-shadow: none !important;      
+}
+
+
+/* ------ Font Sizes -------- */
+/* Mobile */
+@media (max-width: 767px) {
+  .lead {
+    background-color: yellow;
+    font-size: 1.25rem !important; 
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px){
+  .lead {
+    font-size: 1.75rem !important; 
+  }
 }
 
