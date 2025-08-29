@@ -8,7 +8,7 @@ export default function Card({
   interval,
 }) {
   return (
-    <div className="col-lg-3 col-md-4 mb-5">
+    <div className="col-lg-3 col-md-6 mb-5">
       <div className="project-card box h-100 d-flex flex-column p-4 text-white">
         <div className="image-wrapper">
           <img src={image} alt={title} />
@@ -25,18 +25,9 @@ export default function Card({
           >
             {buttonText}
           </a>
-          // <button className="btn btn-dark bg-gradient mt-2">
-          //   <a
-          //     className="btn btn-dark bg-gradient mt-2 align-items-center visitGithub"
-          //     href={buttonHRef}
-          //     target={buttonTarget}
-          //   >
-          //     {buttonText}
-          //   </a>
-          // </button>
         )}
         <div className="card-footer">
-          <p className="interval pt-auto text-muted text-center">{interval}</p>
+          <p className="pt-auto text-muted text-center">{interval}</p>
         </div>
       </div>
     </div>
