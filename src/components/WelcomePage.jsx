@@ -3,7 +3,7 @@ export default function WelcomePage() {
     <section id="home-page" className="page odd pt-5">
       <div className="welcome-box container-fluid d-flex flex-xl-row flex-column">
         {/* Memoji */}
-        <div className="col-xl-6 d-flex justify-content-center">
+        <div className="col-xl-6 d-flex justify-content-center align-items-center ">
           <img
             className="memoji-img"
             src="images/memoji-wave.png"
