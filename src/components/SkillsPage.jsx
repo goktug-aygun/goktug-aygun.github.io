@@ -1,22 +1,23 @@
 import SkillsBox from "../components/SkillsBox";
 
 const PLData = [
-  { name: "Assembly", imageSrc: "/images/skills/PL/Assembly.png" },
-  { name: "C", imageSrc: "/images/skills/PL/C.png" },
-  { name: "C#", imageSrc: "/images/skills/PL/C_sharp.png" },
+  { name: "Python", imageSrc: "/images/skills/PL/Python.png" },
   { name: "C++", imageSrc: "/images/skills/PL/Cpp.png" },
-  { name: "CSS", imageSrc: "/images/skills/PL/CSS.png" },
+  { name: "C#", imageSrc: "/images/skills/PL/C_sharp.png" },
+  { name: "C", imageSrc: "/images/skills/PL/C.png" },
   { name: "HTML", imageSrc: "/images/skills/PL/HTML.png" },
-  { name: "Java", imageSrc: "/images/skills/PL/Java.png" },
+  { name: "CSS", imageSrc: "/images/skills/PL/CSS.png" },
   {
     name: "JavaScript",
     imageSrc: "/images/skills/PL/JavaScript.png",
   },
+  { name: "Java", imageSrc: "/images/skills/PL/Java.png" },
   { name: "MySQL", imageSrc: "/images/skills/PL/MySQL.png" },
-  { name: "Python", imageSrc: "/images/skills/PL/Python.png" },
+  { name: "Assembly", imageSrc: "/images/skills/PL/Assembly.png" },
 ];
 
 const FWData = [
+  { name: "Git", imageSrc: "/images/skills/FW/git.png" },
   { name: "Android", imageSrc: "/images/skills/FW/Android.png" },
   { name: "Bootstrap", imageSrc: "/images/skills/FW/Bootstrap.png" },
   { name: "Docker", imageSrc: "/images/skills/FW/Docker.png" },
@@ -33,26 +34,28 @@ const FWData = [
 
 export default function SkillsPage() {
   return (
-    <div className="d-flex flex-column">
-      <h1>Skills / CV</h1>
-      <p>
-        Below are some of the programming languages and tools that I practiced
-        with various projects and studies.
-      </p>
-      <div className="d-flex bg-dark flex-row justify-content-evenly">
-        <SkillsBox skills={PLData} title={"Programming Languages"} />
-        <SkillsBox
-          skills={FWData}
-          title={"Frameworks & Libraries & Technologies"}
-        />
+    <section id="skills-page" className="page">
+      <div className="even min-vh-100 d-flex flex-column">
+        <h1 className="page-title">Skills / CV</h1>
+        <p>
+          Below are some of the programming languages and tools that I practiced
+          with various projects and studies.
+        </p>
+        <div className="d-flex flex-column flex-lg-row justify-content-evenly">
+          <SkillsBox skills={PLData} title={"Programming Languages"} />
+          <SkillsBox
+            skills={FWData}
+            title={"Frameworks & Libraries & Technologies"}
+          />
+        </div>
+        <p>
+          You find my Curriculum Vitae (CV){" "}
+          <a className="downloadCV" href="Goktug_Aygun_CV.pdf" target="_blank">
+            here
+          </a>{" "}
+          as well.
+        </p>
       </div>
-      <p>
-        You find my Curriculum Vitae (CV){" "}
-        <a className="downloadCV" href="Goktug_Aygun_CV.pdf" target="_blank">
-          here
-        </a>{" "}
-        as well.
-      </p>
-    </div>
+    </section>
   );
 }
