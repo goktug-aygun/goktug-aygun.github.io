@@ -3,7 +3,7 @@
     "name":"Goktug Aygun",
     "home-btn": "Home",
     "about-me-btn": "About Me",
-    "projects-exp-bnt": "Projects and Experience",
+    "projects-exp-btn": "Projects and Experience",
     "skills-btn": "Skills / CV",
     "contact-btn": "Reach Me",
     "contact-github": "Github Profile",
@@ -12,7 +12,23 @@
   },
   "home-pg": {
     "landing-text": "Hey! It's Goktug.",
-    "cv-btn": "Get My CV Here!"
+    "cv-btn": "Get My CV Here!",
+    "education-msc":{
+         "city" : "Leuven",
+        "country" : "Belgium",
+        "univ" : "KU Leuven",
+        "focus" : "Artificial Intelligence",
+        "date" : "Sep. 2025 - Exp. Jun. 2027",
+        "gpa" : "GPA"
+    },
+    "education-bsc":{
+        "city" : "Istanbul",
+        "country" : "Turkey",
+        "univ" : "Sabancı University",
+        "focus" : "Computer Science and Engineering",
+        "date" : "Sep. 2021 - Jun. 2025",
+        "gpa" : "GPA"
+    }
   },
   "about-pg": {
     "title": "About Me",
@@ -105,7 +121,7 @@
     {
         "id": "diSUcord-cs408",
         "title": "DiSUCord - Message Networking via Channels",
-        "desc": "IThis project imititates the well-known application Discord, using TCP sockets to provide communication medium for different users.",
+        "desc": "This project imititates the well-known application Discord, using TCP sockets to provide communication medium for different users.",
         "btn": "Visit Github Page",
         "href" : "https://github.com/goktug-aygun/CS408-Project",
         "target" : "_blank",
@@ -188,9 +204,9 @@
     "title": "Skills / CV",
     "desc": "Below are some of the programming languages and tools that I practiced with various projects and studies.",
     "pl-subtitle": "Programming Languages",
-    "tf-subtitle": "Technologies/Frameworks",
+    "tf-subtitle": "Frameworks & Libraries & Technologies",
     "cv-pre": "You can find my curriculum vitae (CV)",
-    "cv-anchor": "here",
+    "cv-anchor": " here ",
     "cv-post": "as well."    
   }
   ,"contact-pg": {

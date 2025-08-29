@@ -8,7 +8,7 @@ export default function Card({
   interval,
 }) {
   return (
-    <div className="col-lg-3 col-md-6 mb-5">
+    <div className="col-lg-4 col-md-6 mb-5">
       <div className="project-card box h-100 d-flex flex-column p-4 text-white">
         <div className="image-wrapper">
           <img src={image} alt={title} />

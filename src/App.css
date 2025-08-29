@@ -240,7 +240,6 @@ section{
 /* Mobile */
 @media (max-width: 767px) {
   .lead {
-    background-color: yellow;
     font-size: 1.25rem !important; 
   }
 }

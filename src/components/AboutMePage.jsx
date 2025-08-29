@@ -1,17 +1,19 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-export default function AboutMePage() {
+export default function AboutMePage({ resources, language }) {
   const images = [
     "images/carousel/diploma-img.jpg",
     "images/carousel/diploma-green.jpg",
     "images/carousel/la-img.jpg",
   ];
 
+  const aboutMePageInfo = resources[language]["about-pg"];
+
   return (
     <section id="about-me-page" className="page">
       <div className="even min-vh-100 row">
-        <h1 className="page-title">About Me</h1>
+        <h1 className="page-title">{aboutMePageInfo["title"]}</h1>
         <div className="carousel-container col-xl-6">
           <div
             id="photoCarousel"
@@ -59,13 +61,7 @@ export default function AboutMePage() {
         </div>
 
         <div className="landing-box col-xl-6 py-3 py-md-5 d-flex align-items-start">
-          <span className="lead px-3 px-md-5">
-            Hi there! I am Goktug Aygun, a Computer Science and Engineering
-            graduate from Sabancı University and currently pursuing my Master's
-            degree at KU Leuven. I am specializing in Artificial Intelligence
-            and Machine Learning, and I am eager to apply my expertise by
-            contributing to innovative projects.
-          </span>
+          <span className="lead px-3 px-md-5">{aboutMePageInfo["desc"]}</span>
         </div>
       </div>
     </section>

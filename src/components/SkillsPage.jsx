@@ -22,6 +22,7 @@ const FWData = [
   { name: "Bootstrap", imageSrc: "/images/skills/FW/Bootstrap.png" },
   { name: "Docker", imageSrc: "/images/skills/FW/Docker.png" },
   { name: "MongoDB", imageSrc: "/images/skills/FW/MongoDB.png" },
+  { name: "i18next", imageSrc: "/images/skills/FW/i18next.png" },
   { name: "NodeJS", imageSrc: "/images/skills/FW/Nodejs.png" },
   { name: "Spring", imageSrc: "/images/skills/FW/Spring.png" },
   { name: "ReactJS", imageSrc: "/images/skills/FW/Reactjs.png" },
@@ -32,28 +33,24 @@ const FWData = [
   { name: "NumPy", imageSrc: "/images/skills/FW/NumPy.png" },
 ];
 
-export default function SkillsPage() {
+export default function SkillsPage({ resources, language }) {
+  const skillsPageInfo = resources[language]["skills-pg"];
+
   return (
     <section id="skills-page" className="page">
       <div className="even min-vh-100 d-flex flex-column">
-        <h1 className="page-title">Skills / CV</h1>
-        <p className="lead">
-          Below are some of the programming languages and tools that I practiced
-          with various projects and studies.
-        </p>
+        <h1 className="page-title">{skillsPageInfo["title"]}</h1>
+        <p className="lead">{skillsPageInfo["desc"]}</p>
         <div className="d-flex flex-column flex-lg-row justify-content-evenly">
-          <SkillsBox skills={PLData} title={"Programming Languages"} />
-          <SkillsBox
-            skills={FWData}
-            title={"Frameworks & Libraries & Technologies"}
-          />
+          <SkillsBox skills={PLData} title={skillsPageInfo["pl-subtitle"]} />
+          <SkillsBox skills={FWData} title={skillsPageInfo["tf-subtitle"]} />
         </div>
         <p className="lead">
-          You find my Curriculum Vitae (CV){" "}
+          {skillsPageInfo["cv-pre"]}
           <a className="downloadCV" href="Goktug_Aygun_CV.pdf" target="_blank">
-            here
-          </a>{" "}
-          as well.
+            {skillsPageInfo["cv-anchor"]}
+          </a>
+          {skillsPageInfo["cv-post"]}
         </p>
       </div>
     </section>

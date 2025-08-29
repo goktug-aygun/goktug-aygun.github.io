@@ -3,7 +3,7 @@
     "name":"Göktuğ Aygün",
     "home-btn": "Ana Sayfa",
     "about-me-btn": "Hakkımda",
-    "projects-exp-bnt": "Projelerim ve Tecrübem",
+    "projects-exp-btn": "Projelerim ve Tecrübem",
     "skills-btn": "Yeteneklerim / CV",
     "contact-btn": "İletişim",
     "contact-github": "Github Profili",
@@ -12,7 +12,23 @@
   },
   "home-pg": {
     "landing-text": "Selam! Ben Göktuğ.",
-    "cv-btn": "CV'me Bakın!"
+    "cv-btn": "CV'me Bakın!",
+    "education-msc":{
+         "city" : "Leuven",
+        "country" : "Belçika",
+        "univ" : "KU Leuven",
+        "focus" : "Yapay Zeka",
+        "date" : "Eyl. 2025 - Tahm. Haz. 2027",
+        "gpa" : "GANO"
+    },
+    "education-bsc":{
+         "city" : "İstanbul",
+        "country" : "Türkiye",
+        "univ" : "Sabancı Üniversitesi",
+        "focus" : "Bilgisayar Bilimi ve Mühendisliği",
+        "date" : "Eyl. 2021 - Haz. 2025",
+        "gpa" : "GANO"
+    }
   },
   "about-pg": {
     "title": "Hakkımda",
@@ -187,14 +203,15 @@
     "title": "Yeteneklerim / CV",
     "desc": "Aşağıda, çeşitli projeler ve çalışmalarla deneyim kazandığım bazı programlama dilleri ve araçlar bulunmaktadır.",
     "pl-subtitle": "Programlama Dilleri",
-    "tf-subtitle": "Teknolojiler / Frameworkler",
-    "cv-pre": "Özgeçmişime (CV) ",
-    "cv-anchor": "buradan da",
-    "cv-post": " ulaşabilirsiniz."
+    "tf-subtitle": "Frameworkler & Kütüphaneler & Teknolojiler",
+    "cv-pre": "Özgeçmişime (CV)",
+    "cv-anchor": " buradan da ",
+    "cv-post": "ulaşabilirsiniz."
 },
 "contact-pg": {
     "title": "İletişim",
-    "desc": "Herhangi bir sorunuz olursa benimle iletişime geçmekten çekinmeyin. Görüşlerinizi duymayı çok isterim",
+    "desc1": "Herhangi bir sorunuz olursa benimle iletişime geçmekten çekinmeyin.",
+    "desc2": "Görüşlerinizi duymayı çok isterim.",
     "name-box": "Adınız",
     "email-box": "E-posta Adresiniz",
     "phone-number-box": "Telefon Numaranız (Opsiyonel)",

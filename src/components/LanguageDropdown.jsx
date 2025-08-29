@@ -31,7 +31,7 @@ export default function LanguageDropdown({ onLanguageChange }) {
       </a>
       <ul className="dropdown-menu">
         {Object.keys(languages)
-          .filter((lang) => lang !== selectedLanguage) // sadece diğerini göster
+          .filter((lang) => lang !== selectedLanguage) // show the non-selected language option
           .map((lang) => (
             <li key={lang}>
               <button

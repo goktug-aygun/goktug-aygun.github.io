@@ -5,7 +5,9 @@ import emailjs from "@emailjs/browser";
 import "../toast.css";
 import "../animations.css";
 
-export default function ContactPage() {
+export default function ContactPage({ resources, language }) {
+  const contactPageInfo = resources[language]["contact-pg"];
+
   // Variables for Email.js call
   const [vst_name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -21,14 +23,8 @@ export default function ContactPage() {
   const [toast, setToast] = useState({ msg: "", type: "" });
 
   // will transfer to json locales soon
-  let name_warning =
-    "<i class='bi bi-exclamation-triangle'></i>Please write your name.";
-  let mail_warning =
-    "<i class='bi bi-exclamation-triangle'></i>Please write your email.";
-  let message_warning =
-    "<i class='bi bi-exclamation-triangle'></i>Please write your message.";
-  let valid_warning =
-    "<i class='bi bi-hand-thumbs-up'></i>Thank you for your mail! I will get back to you soon.";
+  let exc_icon = "<i class='bi bi-exclamation-triangle'></i>";
+  let tup_icon = "<i class='bi bi-hand-thumbs-up'></i>";
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -38,23 +34,32 @@ export default function ContactPage() {
   function validateForm() {
     if (vst_name.trim() === "") {
       nameRef.current.focus();
-      show(name_warning, "invalid");
+      show(
+        `${exc_icon}${contactPageInfo["warnings"]["name_warning"]}`,
+        "invalid"
+      );
       return false;
     }
 
     if (email.trim() === "") {
       mailRef.current.focus();
-      show(mail_warning, "invalid");
+      show(
+        `${exc_icon}${contactPageInfo["warnings"]["mail_warning"]}`,
+        "invalid"
+      );
       return false;
     }
 
     if (message.trim() === "") {
       msgRef.current.focus();
-      show(message_warning, "invalid");
+      show(
+        `${exc_icon}${contactPageInfo["warnings"]["msg_warning"]}`,
+        "invalid"
+      );
       return false;
     }
 
-    show(valid_warning, "valid");
+    show(`${tup_icon}${contactPageInfo["warnings"]["valid_warning"]}`, "valid");
     sendMail();
     return true;
   }
@@ -93,10 +98,11 @@ export default function ContactPage() {
   return (
     <section id="contact-page" className="odd page">
       <div className="text-center">
-        <h1 className="page-title">Contact</h1>
+        <h1 className="page-title">{contactPageInfo["title"]}</h1>
         <p className="lead pt-1">
-          Please feel free to reach out if you have any questions
-          <br />I would love to hear your feedbacks.
+          {contactPageInfo["desc1"]}
+          <br />
+          {contactPageInfo["desc2"]}
         </p>
         <img
           src="images/memoji-contact.png"
@@ -112,7 +118,7 @@ export default function ContactPage() {
             <ContactPageBox
               className="no-bg-change"
               id="name"
-              BoxText="Your Name"
+              BoxText={contactPageInfo["name-box"]}
               type="text"
               value={vst_name}
               onChange={(e) => setName(e.target.value)}
@@ -123,7 +129,7 @@ export default function ContactPage() {
             <ContactPageBox
               className="no-bg-change"
               id="email"
-              BoxText="Your Email"
+              BoxText={contactPageInfo["email-box"]}
               type="email"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               value={email}
@@ -135,7 +141,7 @@ export default function ContactPage() {
             <ContactPageBox
               className="no-bg-change"
               id="number"
-              BoxText="Your Phone Number (Not Required)"
+              BoxText={contactPageInfo["phone-number-box"]}
               type="text"
               inputMode="numeric"
               pattern="[0-9]+"
@@ -151,7 +157,7 @@ export default function ContactPage() {
             <ContactPageBox
               className="no-bg-change"
               id="msg"
-              BoxText="Your Message"
+              BoxText={contactPageInfo["msg-box"]}
               type="text"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
@@ -163,7 +169,7 @@ export default function ContactPage() {
                 type="submit"
                 className="btn btn-outline-dark w-100 text-center mx-auto"
               >
-                Send
+                {contactPageInfo["send-btn"]}
               </button>
             </div>
           </form>

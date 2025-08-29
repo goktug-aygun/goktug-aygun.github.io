@@ -4,7 +4,8 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 import LanguageDropdown from "./LanguageDropdown";
 
-export default function Navbar({ language, onLanguageChange }) {
+export default function Navbar({ resources, language, onLanguageChange }) {
+  const navbarInfo = resources[language]["navbar"];
   useEffect(() => {
     const scrollButtons = document.getElementsByClassName("scroll");
 
@@ -32,8 +33,7 @@ export default function Navbar({ language, onLanguageChange }) {
   const [currentLanguage, setCurrentLanguage] = useState("en");
 
   const handleLanguageChange = (lang) => {
-    setCurrentLanguage(lang);
-    // İstersen burada diğer dil değişikliği mantığını da ekleyebilirsin
+    onLanguageChange(lang);
     console.log("Selected language:", lang);
   };
 
@@ -41,7 +41,7 @@ export default function Navbar({ language, onLanguageChange }) {
     <nav className="navbar navbar-expand-lg position-fixed bg-body-tertiary">
       <div className="container-fluid nav-div">
         <a className="navbar-brand">
-          <strong>Goktug Aygun</strong>
+          <strong>{navbarInfo["name"]}</strong>
         </a>
         <button
           className="navbar-toggler"
@@ -63,7 +63,7 @@ export default function Navbar({ language, onLanguageChange }) {
                 data-target="home-page"
                 aria-current="page"
               >
-                Home
+                {navbarInfo["home-btn"]}
               </a>
             </li>
             <li className="nav-item">
@@ -72,7 +72,7 @@ export default function Navbar({ language, onLanguageChange }) {
                 data-target="about-me-page"
                 aria-current="page"
               >
-                About Me
+                {navbarInfo["about-me-btn"]}
               </a>
             </li>
             <li className="nav-item">
@@ -81,12 +81,12 @@ export default function Navbar({ language, onLanguageChange }) {
                 data-target="projects-page"
                 aria-current="page"
               >
-                Projects and Experience
+                {navbarInfo["projects-exp-btn"]}
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link scroll" data-target="skills-page">
-                Skills / CV
+                {navbarInfo["skills-btn"]}
               </a>
             </li>
 
@@ -101,7 +101,7 @@ export default function Navbar({ language, onLanguageChange }) {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Reach Me
+                {navbarInfo["contact-btn"]}
               </a>
               <ul className="dropdown-menu">
                 <li>
@@ -112,7 +112,7 @@ export default function Navbar({ language, onLanguageChange }) {
                     rel="noreferrer"
                   >
                     <i className="bi bi-github me-2"></i>
-                    <span>Github Profile</span>
+                    <span>{navbarInfo["contact-github"]}</span>
                   </a>
                   <a
                     className="dropdown-item visitLinkedin"
@@ -121,7 +121,7 @@ export default function Navbar({ language, onLanguageChange }) {
                     rel="noreferrer"
                   >
                     <i className="bi bi-linkedin me-2"></i>
-                    <span>Linkedin Profile</span>
+                    <span>{navbarInfo["contact-linkedin"]}</span>
                   </a>
                 </li>
                 <li>
@@ -133,7 +133,7 @@ export default function Navbar({ language, onLanguageChange }) {
                     data-target="contact-page"
                   >
                     <i className="bi bi-envelope me-2"></i>
-                    <span>Get in Contact</span>
+                    <span>{navbarInfo["contact-page"]}</span>
                   </a>
                 </li>
               </ul>
