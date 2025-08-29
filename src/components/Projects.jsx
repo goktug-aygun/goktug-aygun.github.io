@@ -4,12 +4,12 @@ const image_path = "/images/projects/";
 
 export default function Projects({ source }) {
   return (
-    <div className="row">
+    <div className="row p-0 p-lg-5">
       {Object.entries(source).map(([key, project]) => (
         <Card
           key={key}
           title={project.title}
-          image={`${image_path}${project.image}`} // project key'i ile path oluşturduk
+          image={`${image_path}${project.image}`}
           description={project.desc}
           buttonText={project.btn}
           buttonTarget={project.target}
