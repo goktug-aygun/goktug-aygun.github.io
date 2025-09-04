@@ -141,7 +141,7 @@
         "id" : "deathDB-cs306",
         "title": "Dünya Genelinde Ölüm Sebepleri Database Uygulaması",
         "desc": "Bu proje, gerçek dünya verilerinden içgörüler elde etmek amacıyla; işleme teknikleri, MySQL ve veri görselleştirme araçları kullanılarak 5 öğrenci tarafından geliştirildi.",
-        "btn": "",
+        "btn": "Github Sayfasını Ziyaret Et",
         "href" : "https://github.com/goktug-aygun/CS306-Project",
         "target" : "_blank",
         "date": "Bahar 2023",
