@@ -25,6 +25,7 @@ const FWData = [
   { name: "i18next", imageSrc: "/images/skills/FW/i18next.png" },
   { name: "NodeJS", imageSrc: "/images/skills/FW/Nodejs.png" },
   { name: "Spring", imageSrc: "/images/skills/FW/Spring.png" },
+  { name: "Flask", imageSrc: "/images/skills/FW/Flask.png" },
   { name: "ReactJS", imageSrc: "/images/skills/FW/Reactjs.png" },
   { name: "Langchain", imageSrc: "/images/skills/FW/langchain.png" },
   { name: "Selenium", imageSrc: "/images/skills/FW/selenium.png" },

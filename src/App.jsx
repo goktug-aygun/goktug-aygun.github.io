@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 import Navbar from "./components/Navbar";
+import ScrollIndicator from "./components/ScrollIndicator";
 import WelcomePage from "./components/WelcomePage";
 import AboutMePage from "./components/AboutMePage";
 import ProjectsPage from "./components/ProjectsPage";
@@ -34,46 +35,50 @@ function App() {
   const contactRef = useRef(null);
 
   return (
-    <div className="app-container">
-      <Navbar
-        sections={{
-          home: homeRef,
-          about: aboutRef,
-          projects: projectsRef,
-          skills: skillsRef,
-          contact: contactRef,
-        }}
-        resources={resources}
-        language={language}
-        onLanguageChange={(lang) => {
-          changeLanguage(lang);
-        }}
-      />
-      <WelcomePage
-        innerRef={homeRef}
-        resources={resources}
-        language={language}
-      />
-      <AboutMePage
-        innerRef={aboutRef}
-        resources={resources}
-        language={language}
-      />
-      <ProjectsPage
-        innerRef={projectsRef}
-        resources={resources}
-        language={language}
-      />
-      <SkillsPage
-        innerRef={skillsRef}
-        resources={resources}
-        language={language}
-      />
-      <ContactPage
-        innerRef={contactRef}
-        resources={resources}
-        language={language}
-      />
+    <div className="root-container">
+      <div className="app-container">
+        <Navbar
+          sections={{
+            home: homeRef,
+            about: aboutRef,
+            projects: projectsRef,
+            skills: skillsRef,
+            contact: contactRef,
+          }}
+          resources={resources}
+          language={language}
+          onLanguageChange={(lang) => {
+            changeLanguage(lang);
+          }}
+        />
+
+        <WelcomePage
+          innerRef={homeRef}
+          resources={resources}
+          language={language}
+        />
+        <AboutMePage
+          innerRef={aboutRef}
+          resources={resources}
+          language={language}
+        />
+        <ProjectsPage
+          innerRef={projectsRef}
+          resources={resources}
+          language={language}
+        />
+        <SkillsPage
+          innerRef={skillsRef}
+          resources={resources}
+          language={language}
+        />
+        <ContactPage
+          innerRef={contactRef}
+          resources={resources}
+          language={language}
+        />
+      </div>
+      <ScrollIndicator />
     </div>
   );
 }

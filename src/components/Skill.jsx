@@ -1,6 +1,6 @@
 export default function Skill({ imageSrc, name, altText }) {
   return (
-    <div className="p-2 skill-box d-flex flex-column align-items-center mx-0">
+    <div className="p-2 col-xl-2 me-2 mw-2 skill-box d-flex flex-column align-items-center mx-0">
       <img
         src={imageSrc}
         alt={altText || name}
