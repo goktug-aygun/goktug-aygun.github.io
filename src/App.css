@@ -95,8 +95,15 @@ a {
   text-decoration: none !important;
 }
 
-.page{
-  min-height: 100vh;
+.app-container {
+  height: 100vh;              
+  overflow-y: scroll;         
+  scroll-snap-type: y mandatory; 
+}
+
+.page {
+  scroll-snap-align: start;   
+  min-height: 100vh;          
   padding-bottom: 0;
 }
 
