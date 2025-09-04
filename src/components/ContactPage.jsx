@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 import "../toast.css";
 import "../animations.css";
 
-export default function ContactPage({ resources, language }) {
+export default function ContactPage({ innerRef, resources, language }) {
   const contactPageInfo = resources[language]["contact-pg"];
 
   // Variables for Email.js call
@@ -96,7 +96,7 @@ export default function ContactPage({ resources, language }) {
   }
 
   return (
-    <section id="contact-page" className="odd page">
+    <section id="contact-page" ref={innerRef} className="odd page">
       <div className="text-center">
         <h1 className="page-title">{contactPageInfo["title"]}</h1>
         <p className="lead pt-1">

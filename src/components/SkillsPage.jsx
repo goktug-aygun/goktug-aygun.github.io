@@ -33,11 +33,11 @@ const FWData = [
   { name: "NumPy", imageSrc: "/images/skills/FW/NumPy.png" },
 ];
 
-export default function SkillsPage({ resources, language }) {
+export default function SkillsPage({ innerRef, resources, language }) {
   const skillsPageInfo = resources[language]["skills-pg"];
 
   return (
-    <section id="skills-page" className="page">
+    <section id="skills-page" ref={innerRef} className="page">
       <div className="even min-vh-100 d-flex flex-column">
         <h1 className="page-title">{skillsPageInfo["title"]}</h1>
         <p className="lead">{skillsPageInfo["desc"]}</p>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import i18n from "./i18n";
 import { useTranslation } from "react-i18next";
 
@@ -27,20 +27,53 @@ function App() {
     setLanguage(lng);
   };
 
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const skillsRef = useRef(null);
+  const contactRef = useRef(null);
+
   return (
     <div className="app-container">
       <Navbar
+        sections={{
+          home: homeRef,
+          about: aboutRef,
+          projects: projectsRef,
+          skills: skillsRef,
+          contact: contactRef,
+        }}
         resources={resources}
         language={language}
         onLanguageChange={(lang) => {
           changeLanguage(lang);
         }}
       />
-      <WelcomePage resources={resources} language={language} />
-      <AboutMePage resources={resources} language={language} />
-      <ProjectsPage resources={resources} language={language} />
-      <SkillsPage resources={resources} language={language} />
-      <ContactPage resources={resources} language={language} />
+      <WelcomePage
+        innerRef={homeRef}
+        resources={resources}
+        language={language}
+      />
+      <AboutMePage
+        innerRef={aboutRef}
+        resources={resources}
+        language={language}
+      />
+      <ProjectsPage
+        innerRef={projectsRef}
+        resources={resources}
+        language={language}
+      />
+      <SkillsPage
+        innerRef={skillsRef}
+        resources={resources}
+        language={language}
+      />
+      <ContactPage
+        innerRef={contactRef}
+        resources={resources}
+        language={language}
+      />
     </div>
   );
 }

@@ -1,8 +1,8 @@
-export default function WelcomePage({ resources, language }) {
+export default function WelcomePage({ innerRef, resources, language }) {
   const welcomePageInfo = resources[language]["home-pg"];
 
   return (
-    <section id="home-page" className="page odd pt-5">
+    <section id="home-page" ref={innerRef} className="page odd pt-5">
       <div className="welcome-box container-fluid d-flex flex-xl-row flex-column">
         {/* Memoji */}
         <div className="col-xl-6 d-flex justify-content-center align-items-center ">
