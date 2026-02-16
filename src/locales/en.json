@@ -39,6 +39,16 @@
     "desc": "Here are some of the projects to which I have contributed. During these projects, I was able to practice technical skills besides improving my social abilities. There are many more great projects to come...",
     "cards":[
     {
+        "id": "intern-didactlabs",
+        "title": "Software Engineering Intern at Didactlabs",
+        "desc": "I am currently working as a Software Engineering Intern at DidactLabs, where I contribute to the development and refinement of an AI-powered educational tool designed to support students in their learning process. Our goal is to create a balanced and trustworthy learning environment where AI serves as a supportive and transparent assistant for both students and teachers.",
+        "btn": "",
+        "href" : "",
+        "target" : "",
+        "date": "Feb. 2026 - Present",
+        "image":"didactlabs.png"
+    },
+    {
         "id": "master-leuven",
         "title": "Master's Education at KU Leuven",
         "desc": "I am pursuing my Master's Degree at KU Leuven with a strong focus on Artificial Intelligence and Machine Learning. I am eager to sharpen my skills and improve my expertise by contributing to projects and research in these fields. My goal is to apply AI-driven approaches to real-world problems and develop efficient, impactful solutions.",
