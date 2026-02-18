@@ -26,7 +26,6 @@ export default function Navbar({
 
   const handleLanguageChange = (lang) => {
     onLanguageChange(lang);
-    console.log("Selected language:", lang);
   };
 
   return (

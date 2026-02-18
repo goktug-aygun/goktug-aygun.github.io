@@ -221,7 +221,8 @@
   }
   ,"contact-pg": {
     "title": "Contact",
-    "desc": "Please feel free to reach out if you have any questions. I would love to hear your feedbacks.",
+    "desc1": "Please feel free to reach out if you have any questions.",
+    "desc2": "I would love to hear your feedbacks.",
     "name-box": "Your Name",
     "email-box": "Your Email",
     "phone-number-box": "Your Phone Number (Not Required)",

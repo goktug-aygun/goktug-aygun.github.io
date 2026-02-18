@@ -1,6 +1,14 @@
 import ContactPageBox from "./ContactPageBox";
 import { useRef, useState } from "react";
+
 import emailjs from "@emailjs/browser";
+
+import { parsePhoneNumberFromString } from "libphonenumber-js";
+
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/bootstrap.css";
+
+import trCountryNames from "../locales/countries_tr.json";
 
 import "../toast.css";
 import "../animations.css";
@@ -8,13 +16,11 @@ import "../animations.css";
 export default function ContactPage({ innerRef, resources, language }) {
   const contactPageInfo = resources[language]["contact-pg"];
 
-  // Variables for Email.js call
   const [vst_name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
-  // References for Form Boxes
   const nameRef = useRef(null);
   const msgRef = useRef(null);
   const mailRef = useRef(null);
@@ -22,7 +28,6 @@ export default function ContactPage({ innerRef, resources, language }) {
 
   const [toast, setToast] = useState({ msg: "", type: "" });
 
-  // will transfer to json locales soon
   let exc_icon = "<i class='bi bi-exclamation-triangle'></i>";
   let tup_icon = "<i class='bi bi-hand-thumbs-up'></i>";
 
@@ -36,7 +41,7 @@ export default function ContactPage({ innerRef, resources, language }) {
       nameRef.current.focus();
       show(
         `${exc_icon}${contactPageInfo["warnings"]["name_warning"]}`,
-        "invalid"
+        "invalid",
       );
       return false;
     }
@@ -45,7 +50,7 @@ export default function ContactPage({ innerRef, resources, language }) {
       mailRef.current.focus();
       show(
         `${exc_icon}${contactPageInfo["warnings"]["mail_warning"]}`,
-        "invalid"
+        "invalid",
       );
       return false;
     }
@@ -54,7 +59,7 @@ export default function ContactPage({ innerRef, resources, language }) {
       msgRef.current.focus();
       show(
         `${exc_icon}${contactPageInfo["warnings"]["msg_warning"]}`,
-        "invalid"
+        "invalid",
       );
       return false;
     }
@@ -65,31 +70,43 @@ export default function ContactPage({ innerRef, resources, language }) {
   }
 
   function sendMail() {
-    const params = { name: vst_name, email, number: phone, msg: message };
+    let rawPhone = phone;
 
-    console.log("Sending mail with params:", params);
+    // Ensure it starts with + for libphonenumber
+    if (!rawPhone.startsWith("+")) {
+      rawPhone = `+${rawPhone}`;
+    }
+
+    let formattedPhone = rawPhone;
+
+    // Parse and format internationally
+    const phoneNumber = parsePhoneNumberFromString(rawPhone);
+    if (phoneNumber) {
+      formattedPhone = phoneNumber.formatInternational();
+    }
+
+    const params = {
+      name: vst_name,
+      email,
+      number: formattedPhone,
+      msg: message,
+    };
 
     emailjs
-      .send(
-        "service_qtuotuz", // Service ID
-        "template_a3xdol8", // Template ID
-        params,
-        "KtdNDRoFA_1mMpx_w" // Public Key
-      )
+      .send("service_qtuotuz", "template_a3xdol8", params, "KtdNDRoFA_1mMpx_w")
       .then(
-        (res) => {
+        () => {
           setName("");
           setEmail("");
           setPhone("");
           setMessage("");
         },
-        (err) => {}
+        (err) => {},
       );
   }
 
   function show(msg, type = "") {
     setToast({ msg, type });
-
     setTimeout(() => {
       setToast({ msg: "", type: "" });
     }, 3000);
@@ -131,25 +148,29 @@ export default function ContactPage({ innerRef, resources, language }) {
               id="email"
               BoxText={contactPageInfo["email-box"]}
               type="email"
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               ref={mailRef}
             />
 
             {/* Phone Number */}
-            <ContactPageBox
-              className="no-bg-change"
-              id="number"
-              BoxText={contactPageInfo["phone-number-box"]}
-              type="text"
-              inputMode="numeric"
-              pattern="[0-9]+"
+            <PhoneInput
+              key={language}
+              country={language === "en" ? "be" : "tr"}
               value={phone}
-              ref={phoneRef}
-              onChange={(e) => {
-                const onlyNumbers = e.target.value.replace(/\D/g, "");
-                setPhone(onlyNumbers);
+              onChange={(value) => setPhone(value)}
+              localization={language === "tr" ? trCountryNames : undefined}
+              inputProps={{
+                ref: phoneRef,
+                id: "number",
+                name: "number",
+              }}
+              inputClass="form-control no-bg-change"
+              containerClass="w-100"
+              inputStyle={{
+                width: "100%",
+                height: "58px",
               }}
             />
 
@@ -164,7 +185,7 @@ export default function ContactPage({ innerRef, resources, language }) {
               ref={msgRef}
             />
 
-            <div className="text-center">
+            <div className="text-center my-2">
               <button
                 type="submit"
                 className="btn btn-outline-dark w-100 text-center mx-auto"
@@ -173,6 +194,7 @@ export default function ContactPage({ innerRef, resources, language }) {
               </button>
             </div>
           </form>
+
           <div id="toast-box">
             {toast.msg && (
               <div

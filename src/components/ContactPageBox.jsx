@@ -16,7 +16,7 @@ const ContactPageBox = React.forwardRef(
         </label>
       </div>
     );
-  }
+  },
 );
 
 export default ContactPageBox;

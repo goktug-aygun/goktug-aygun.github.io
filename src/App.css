@@ -41,6 +41,7 @@ body {
 
 .form-label{
   padding-left: 30px !important; 
+  z-index: 1 !important;
 }
 
 .project-card {
@@ -192,6 +193,11 @@ a {
   height: 500px;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon
+{
+  background-color: black !important;
+}
 
 .carousel-item img {
   width: 100%;
@@ -312,4 +318,59 @@ section{
   width: 100%;
   background: linear-gradient(to bottom, #000, #4b4a4a);
   border-radius: 0 0 6px 6px ;
+}
+
+
+
+
+
+
+ .react-tel-input .selected-flag .flag {
+  padding: 0;
+}
+
+li.country .flag{
+  padding: 0;
+}
+
+.react-tel-input .arrow {
+  padding: 0;
+} 
+
+
+
+
+
+/* For Chrome, Safari, Edge */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px white inset; /* Replace 'white' with your input bg */
+  -webkit-text-fill-color: #000; /* Text color */
+  transition: background-color 5000s ease-in-out 0s; /* Optional: prevents flashing */
+}
+
+/* For Firefox */
+input:-moz-autofill {
+  box-shadow: 0 0 0px 1000px white inset;
+  -moz-text-fill-color: #000;
+}
+
+
+
+/* Chrome, Edge, Safari autofill */
+.form-control.no-bg-change:-webkit-autofill,
+.form-control.no-bg-change:-webkit-autofill:hover,
+.form-control.no-bg-change:-webkit-autofill:focus,
+.form-control.no-bg-change:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px white inset; /* Replace white with your background */
+  -webkit-text-fill-color: #000; /* Keep text color */
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Firefox */
+.form-control.no-bg-change:-moz-autofill {
+  box-shadow: 0 0 0px 1000px white inset;
+  -moz-text-fill-color: #000;
 }
