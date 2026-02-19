@@ -9,12 +9,19 @@ html {
   overflow-x: hidden;  
 }
 
+.root-container {
+  position: relative;
+  z-index: 0;
+}
+
 .app-container {
   height: 100vh;              
   overflow-y: scroll;         
   scroll-snap-type: y proximity; 
   scrollbar-width: none;  /* Firefox */
   -ms-overflow-style: none; /* IE 10+ */
+  position: relative;
+  z-index: 1;
 }
 
 .app-container::-webkit-scrollbar {
@@ -45,14 +52,17 @@ body {
 }
 
 .project-card {
+  position: relative;
+  z-index: 1;
   border: 1px solid rgb(33, 37, 41);
   border-radius: 4px;
   box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.5);
-  transition: transform 0.15s;
+  transition: transform 0.15s, z-index 0s;
 }
 
 .project-card:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
+  z-index: 1;
 }
 
 .project-card h4,
@@ -252,7 +262,16 @@ skills-sections {
 /* -------------- */
 
 
+.col-lg-4,
+.col-md-6 {
+  position: relative;
+  z-index: 1;
+}
 
+.justify-content-center.row {
+  position: relative;
+  z-index: 1;
+}
 
 
 
@@ -261,6 +280,7 @@ skills-sections {
 
 .carousel-container {
   position: relative;
+  z-index: 1;
 }
 
 .carousel-item {
@@ -306,9 +326,9 @@ skills-sections {
     opacity: 1;
     top: 0;
     left: 0;
-    position: fixed;
+    position: fixed !important;
     width: 100vw;
-    z-index: 3;
+    z-index: 999999 !important;
 }
 
 .nav-link{

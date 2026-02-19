@@ -23,3 +23,15 @@
         opacity: 100%;
     }
 }
+
+
+.navbar-fadein {
+    animation: fadeIn 1s ease forwards;
+  position: relative;
+  z-index: 999999;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
