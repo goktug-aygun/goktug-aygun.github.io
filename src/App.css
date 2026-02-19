@@ -177,21 +177,26 @@ a {
 
 /* SKILL CARD */
 .skill-box {
-  /* background: #1e1e1e; */
   border-radius: 16px;
   padding: 20px 40px !important;
 
-  width: 100%;
-  height: 180px;
+  width: 160px;  /* optional: prevents cards from growing too wide */
+  height: 160px;     /* keeps square shape */
+
+   
+
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  
+  text-align: center; /* ensure text is centered */
 
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 
 /* Hover */
 .skill-box:hover {
@@ -211,7 +216,12 @@ a {
   font-size: 1rem;
   font-weight: 500;
   text-align: center;
+
+  word-wrap: break-word; /* old, but safe */
+  overflow-wrap: break-word; /* modern */
+  hyphens: auto;           /* optional, adds hyphenation */
 }
+
 
 
 

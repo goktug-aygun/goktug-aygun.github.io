@@ -25,7 +25,7 @@ const FWData = [
   { name: "Selenium", imageSrc: "/images/skills/FW/selenium.png" },
   { name: "Pandas", imageSrc: "/images/skills/FW/pandas.png" },
   { name: "NumPy", imageSrc: "/images/skills/FW/NumPy.png" },
-  // { name: "HuggingFace", imageSrc: "/images/skills/FW/huggingface.png" },
+  { name: "HuggingFace", imageSrc: "/images/skills/FW/huggingface.png" },
 ];
 
 // Technologies / Tools
@@ -35,7 +35,7 @@ const TechData = [
   { name: "Git", imageSrc: "/images/skills/FW/git.png" },
   { name: "Docker", imageSrc: "/images/skills/FW/Docker.png" },
   {
-    name: "Cloud",
+    name: "Google Cloud",
     imageSrc: "/images/skills/FW/unnamed.png",
   },
 ];
