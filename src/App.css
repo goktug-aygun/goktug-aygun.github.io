@@ -183,8 +183,6 @@ a {
   width: 160px;  /* optional: prevents cards from growing too wide */
   height: 160px;     /* keeps square shape */
 
-   
-
 
   display: flex;
   flex-direction: column;
@@ -213,8 +211,8 @@ a {
 
 /* Name */
 .skill-name {
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 600;
   text-align: center;
 
   word-wrap: break-word; /* old, but safe */
