@@ -30,13 +30,13 @@ const FWData = [
 
 // Technologies / Tools
 const TechData = [
-  { name: "MongoDB", imageSrc: "/images/skills/FW/MongoDB.png" },
-  { name: "NodeJS", imageSrc: "/images/skills/FW/Nodejs.png" },
-  { name: "Git", imageSrc: "/images/skills/FW/git.png" },
-  { name: "Docker", imageSrc: "/images/skills/FW/Docker.png" },
+  { name: "MongoDB", imageSrc: "/images/skills/Tech/MongoDB.png" },
+  { name: "NodeJS", imageSrc: "/images/skills/Tech/Nodejs.png" },
+  { name: "Git", imageSrc: "/images/skills/Tech/git.png" },
+  { name: "Docker", imageSrc: "/images/skills/Tech/Docker.png" },
   {
     name: "Google Cloud",
-    imageSrc: "/images/skills/FW/unnamed.png",
+    imageSrc: "/images/skills/Tech/GoogleCloud.png",
   },
 ];
 
