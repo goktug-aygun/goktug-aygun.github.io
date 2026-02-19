@@ -79,8 +79,8 @@
     },
     {
         "id" : "obss-intern",
-        "title": "OBSS'de Zorunlu C# .NET Stajı",
-        "desc": "Bu proje, benim zorunlu stajım. Projede, hem back-end hem front-end geliştirmek için C# .NET ve React kullandım. Proje, yetkilendirme, kimlik doğrulama ve HTTP istek yapılarını barındırıyor.",
+        "title": "OBSS'de C# .NET Stajı",
+        "desc": "Projede, hem back-end hem front-end geliştirmek için C# .NET ve React kullandım. Proje, yetkilendirme, kimlik doğrulama ve HTTP istek yapılarını barındırıyor.",
         "btn": "",
         "href" : "",
         "target" : "",
@@ -213,7 +213,8 @@
     "title": "Yeteneklerim / CV",
     "desc": "Aşağıda, çeşitli projeler ve çalışmalarla deneyim kazandığım bazı programlama dilleri ve araçlar bulunmaktadır.",
     "pl-subtitle": "Programlama Dilleri",
-    "tf-subtitle": "Frameworkler & Kütüphaneler & Teknolojiler",
+    "fl-subtitle": "Frameworkler & Kütüphaneler",
+    "tech-subtitle": "Teknolojiler",
     "cv-pre": "Özgeçmişime (CV)",
     "cv-anchor": " buradan da ",
     "cv-post": "ulaşabilirsiniz."

@@ -5,8 +5,8 @@ export default function WelcomePage({ innerRef, resources, language }) {
 
   const [randomMemoji] = useState(() => {
     return Math.random() < 0.5
-      ? "/images/memoji-wave-1.png"
-      : "/images/memoji-wave-2.png";
+      ? "/images/memojis/memoji-wave-1.png"
+      : "/images/memojis/memoji-wave-2.png";
   });
 
   return (

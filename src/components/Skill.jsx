@@ -1,11 +1,7 @@
 export default function Skill({ imageSrc, name, altText }) {
   return (
-    <div className="p-2 col-xl-2 me-2 mw-2 skill-box d-flex flex-column align-items-center mx-0">
-      <img
-        src={imageSrc}
-        alt={altText || name}
-        style={{ objectFit: "contain" }}
-      />
+    <div className="skill-box">
+      <img src={imageSrc} alt={altText || name} />
       <span className="skill-name">{name}</span>
     </div>
   );

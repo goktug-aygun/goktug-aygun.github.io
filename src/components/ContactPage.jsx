@@ -122,7 +122,7 @@ export default function ContactPage({ innerRef, resources, language }) {
           {contactPageInfo["desc2"]}
         </p>
         <img
-          src="images/memoji-contact.png"
+          src="images/memojis/memoji-contact.png"
           style={{ height: "25vh", objectFit: "contain", margin: 0 }}
           alt="contact memoji"
         />

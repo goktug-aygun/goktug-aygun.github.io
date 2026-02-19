@@ -80,8 +80,8 @@
     },
     {
         "id": "obss-intern",
-        "title": "C# .NET Mandatory Internship at OBSS",
-        "desc": "This is a project where I did for my mandatory internship. In this project I utilized C# .NET and React for the development of a website project covering both back-end and front-end. It provides authorization, authentication and HTTP request structure.",
+        "title": "C# .NET Internship at OBSS",
+        "desc": "In this project I utilized C# .NET and React for the development of a website project covering both back-end and front-end. It provides authorization, authentication and HTTP request structure.",
         "btn": "",
         "href" : "",
         "target" : "",
@@ -214,7 +214,8 @@
     "title": "Skills / CV",
     "desc": "Below are some of the programming languages and tools that I practiced with various projects and studies.",
     "pl-subtitle": "Programming Languages",
-    "tf-subtitle": "Frameworks & Libraries & Technologies",
+    "fl-subtitle": "Frameworks & Libraries",
+    "tech-subtitle": "Technologies",
     "cv-pre": "You can find my curriculum vitae (CV)",
     "cv-anchor": " here ",
     "cv-post": "as well."    
