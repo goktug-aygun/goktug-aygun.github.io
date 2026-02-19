@@ -38,6 +38,16 @@
     "desc": "İşte katkıda bulunduğum bazı projeler. Bu projelerde, sosyal becerilerimi geliştirmeye ek olarak teknik yeteneklerimi de uygulama fırsatı buldum. Daha birçok harika projenin geleceğine inanıyorum...",
     "cards":[
     {
+        "id": "intern-didactlabs",
+        "title": "DidactLabs'te Yazılım Mühendisliği Stajyeri",
+        "desc": "DidactLabs'te Yazılım Mühendisliği Stajyeri olarak, öğrencilerin öğrenme sürecini desteklemek amacıyla geliştirilen yapay zeka destekli bir eğitim aracının geliştirilmesine ve iyileştirilmesine katkı sağlıyorum. Amacımız, yapay zekanın hem öğrenciler hem de öğretmenler için destekleyici ve şeffaf bir yardımcı olarak konumlandığı, dengeli ve güvenilir bir öğrenme ortamı oluşturmaktır.",
+        "btn": "",
+        "href": "",
+        "target": "",
+        "date": "Şubat 2026'dan Beri",
+        "image": "didactlabs.png"
+    },
+    {
         "id" : "master-leuven",
         "title": "KU Leuven'de Yüksek Lisans Eğitimi",
         "desc": "KU Leuven'de Yapay Zeka ve Makine Öğrenimi alanında yoğunlaşarak Yüksek Lisans eğitimime devam ediyorum. Bu alanlardaki projelere ve araştırmalara katkıda bulunarak becerilerimi geliştirmeyi ve uzmanlığımı ilerletmeyi hedefliyorum. Amacım, yapay zekâ odaklı yaklaşımları gerçek dünya problemlerine uygulamak ve etkili çözümler geliştirmek.",
@@ -69,8 +79,8 @@
     },
     {
         "id" : "obss-intern",
-        "title": "OBSS'de Zorunlu C# .NET Stajı",
-        "desc": "Bu proje, benim zorunlu stajım. Projede, hem back-end hem front-end geliştirmek için C# .NET ve React kullandım. Proje, yetkilendirme, kimlik doğrulama ve HTTP istek yapılarını barındırıyor.",
+        "title": "OBSS'de C# .NET Stajı",
+        "desc": "Projede, hem back-end hem front-end geliştirmek için C# .NET ve React kullandım. Proje, yetkilendirme, kimlik doğrulama ve HTTP istek yapılarını barındırıyor.",
         "btn": "",
         "href" : "",
         "target" : "",
@@ -141,7 +151,7 @@
         "id" : "deathDB-cs306",
         "title": "Dünya Genelinde Ölüm Sebepleri Database Uygulaması",
         "desc": "Bu proje, gerçek dünya verilerinden içgörüler elde etmek amacıyla; işleme teknikleri, MySQL ve veri görselleştirme araçları kullanılarak 5 öğrenci tarafından geliştirildi.",
-        "btn": "",
+        "btn": "Github Sayfasını Ziyaret Et",
         "href" : "https://github.com/goktug-aygun/CS306-Project",
         "target" : "_blank",
         "date": "Bahar 2023",
@@ -203,7 +213,8 @@
     "title": "Yeteneklerim / CV",
     "desc": "Aşağıda, çeşitli projeler ve çalışmalarla deneyim kazandığım bazı programlama dilleri ve araçlar bulunmaktadır.",
     "pl-subtitle": "Programlama Dilleri",
-    "tf-subtitle": "Frameworkler & Kütüphaneler & Teknolojiler",
+    "fl-subtitle": "Frameworkler & Kütüphaneler",
+    "tech-subtitle": "Teknolojiler",
     "cv-pre": "Özgeçmişime (CV)",
     "cv-anchor": " buradan da ",
     "cv-post": "ulaşabilirsiniz."

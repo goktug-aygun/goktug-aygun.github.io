@@ -4,7 +4,6 @@ const PLData = [
   { name: "Python", imageSrc: "/images/skills/PL/Python.png" },
   { name: "C++", imageSrc: "/images/skills/PL/Cpp.png" },
   { name: "C#", imageSrc: "/images/skills/PL/C_sharp.png" },
-  { name: "C", imageSrc: "/images/skills/PL/C.png" },
   { name: "HTML", imageSrc: "/images/skills/PL/HTML.png" },
   { name: "CSS", imageSrc: "/images/skills/PL/CSS.png" },
   {
@@ -13,37 +12,49 @@ const PLData = [
   },
   { name: "Java", imageSrc: "/images/skills/PL/Java.png" },
   { name: "MySQL", imageSrc: "/images/skills/PL/MySQL.png" },
-  { name: "Assembly", imageSrc: "/images/skills/PL/Assembly.png" },
 ];
 
 const FWData = [
-  { name: "Git", imageSrc: "/images/skills/FW/git.png" },
-  { name: "Android", imageSrc: "/images/skills/FW/Android.png" },
   { name: "Bootstrap", imageSrc: "/images/skills/FW/Bootstrap.png" },
-  { name: "Docker", imageSrc: "/images/skills/FW/Docker.png" },
-  { name: "MongoDB", imageSrc: "/images/skills/FW/MongoDB.png" },
   { name: "i18next", imageSrc: "/images/skills/FW/i18next.png" },
-  { name: "NodeJS", imageSrc: "/images/skills/FW/Nodejs.png" },
   { name: "Spring", imageSrc: "/images/skills/FW/Spring.png" },
+  { name: "Flask", imageSrc: "/images/skills/FW/Flask.png" },
+
   { name: "ReactJS", imageSrc: "/images/skills/FW/Reactjs.png" },
   { name: "Langchain", imageSrc: "/images/skills/FW/langchain.png" },
   { name: "Selenium", imageSrc: "/images/skills/FW/selenium.png" },
   { name: "Pandas", imageSrc: "/images/skills/FW/pandas.png" },
-  { name: "HuggingFace", imageSrc: "/images/skills/FW/huggingface.png" },
   { name: "NumPy", imageSrc: "/images/skills/FW/NumPy.png" },
+  { name: "HuggingFace", imageSrc: "/images/skills/FW/huggingface.png" },
 ];
 
-export default function SkillsPage({ resources, language }) {
+// Technologies / Tools
+const TechData = [
+  { name: "MongoDB", imageSrc: "/images/skills/Tech/MongoDB.png" },
+  { name: "NodeJS", imageSrc: "/images/skills/Tech/Nodejs.png" },
+  { name: "Git", imageSrc: "/images/skills/Tech/git.png" },
+  { name: "Docker", imageSrc: "/images/skills/Tech/Docker.png" },
+  {
+    name: "Google Cloud",
+    imageSrc: "/images/skills/Tech/GoogleCloud.png",
+  },
+];
+
+export default function SkillsPage({ innerRef, resources, language }) {
   const skillsPageInfo = resources[language]["skills-pg"];
 
   return (
-    <section id="skills-page" className="page">
+    <section id="skills-page" ref={innerRef} className="page">
       <div className="even min-vh-100 d-flex flex-column">
         <h1 className="page-title">{skillsPageInfo["title"]}</h1>
         <p className="lead">{skillsPageInfo["desc"]}</p>
-        <div className="d-flex flex-column flex-lg-row justify-content-evenly">
+        <div className="skills-sections">
           <SkillsBox skills={PLData} title={skillsPageInfo["pl-subtitle"]} />
-          <SkillsBox skills={FWData} title={skillsPageInfo["tf-subtitle"]} />
+          <SkillsBox skills={FWData} title={skillsPageInfo["fl-subtitle"]} />
+          <SkillsBox
+            skills={TechData}
+            title={skillsPageInfo["tech-subtitle"]}
+          />
         </div>
         <p className="lead">
           {skillsPageInfo["cv-pre"]}

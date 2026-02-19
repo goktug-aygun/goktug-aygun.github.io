@@ -1,15 +1,34 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#root, .app-container {
+  width: 100%;         
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;  
+}
+
+.app-container {
+  height: 100vh;              
+  overflow-y: scroll;         
+  scroll-snap-type: y proximity; 
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.app-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
 #root {
   margin: 0;
   text-align: center;
   width: 100vw;
-  overflow-x: hidden;
-}
-
-html{
-  overflow-x: hidden;
 }
 
 body {
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
 }
@@ -22,6 +41,7 @@ body {
 
 .form-label{
   padding-left: 30px !important; 
+  z-index: 1 !important;
 }
 
 .project-card {
@@ -58,14 +78,14 @@ body {
 }
 
 .image-wrapper {
-    min-height: 250px;
+    height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .title-wrapper {
-    min-height: 150px;
+    min-height: 100px;
 }
 
 .image-wrapper img {
@@ -95,8 +115,11 @@ a {
   text-decoration: none !important;
 }
 
-.page{
-  min-height: 100vh;
+
+
+.page {
+  scroll-snap-align: start;   
+  min-height: 100vh;          
   padding-bottom: 0;
 }
 
@@ -119,43 +142,118 @@ a {
 /* ---------------- */
 /* Skill Page Start */
 
-.skill-box span{
-  margin-bottom: 0;
+/* GRID */
+.skills-grid {
+  display: grid;
+  gap: 20px;
 }
 
-.skill-container {
-    max-width: 60vw;
+/* Desktop */
+@media (min-width: 992px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .skills-sections {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* side-by-side equal columns on desktop */
+    align-items: start; /* optional */
+  }
 }
 
+/* Tablet */
+@media (min-width: 600px) and (max-width: 991px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 599px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* SKILL CARD */
 .skill-box {
-    transition: transform 0.15s, box-shadow 0.15s;
+  border-radius: 16px;
+  padding: 20px 40px !important;
+
+  width: 160px;  /* optional: prevents cards from growing too wide */
+  height: 160px;     /* keeps square shape */
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+  text-align: center; /* ensure text is centered */
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+
+/* Hover */
 .skill-box:hover {
-    transform: scale(1.3);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
 }
 
+/* Image */
 .skill-box img {
-    height: 10vh;
-    object-fit: contain;
+  max-width: 80px;
+  max-height: 80px; 
+  object-fit: contain;
 }
 
-@media (max-width: 768px) {
-.skill-box img {
-    height: 5vh;
-    object-fit: contain;
-}
-}
-
-
+/* Name */
 .skill-name {
-    font-size: 1.3em;
-    font-weight: 500;
-    margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+
+  word-wrap: break-word; /* old, but safe */
+  overflow-wrap: break-word; /* modern */
+  hyphens: auto;           /* optional, adds hyphenation */
+}
+
+
+
+
+skills-sections {
+  display: grid;
+  gap: 40px;
+
+  width: 100%;
+  max-width: 1200px;  
+
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.skills-container {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .skills-sections {
+    grid-template-columns: 1fr; 
+  }
 }
 
 /* Skill Page End */
 /* -------------- */
+
+
+
+
 
 
 
@@ -170,6 +268,12 @@ a {
   height: 500px;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon
+{
+  background-color: black !important;
+  border-radius: 4px !important;
+}
 
 .carousel-item img {
   width: 100%;
@@ -198,12 +302,13 @@ a {
 }
 
 .navbar {
-    opacity: 0.9;
+    /* opacity: 0.9; */
+    opacity: 1;
     top: 0;
     left: 0;
     position: fixed;
     width: 100vw;
-    z-index: 2;
+    z-index: 3;
 }
 
 .nav-link{
@@ -244,10 +349,104 @@ section{
   }
 }
 
-/* Tablets */
-@media (min-width: 768px){
+/* Tablets and Desktops*/
+@media (min-width: 768px){  
   .lead {
     font-size: 1.75rem !important; 
   }
 }
 
+/* Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  .memoji-img {
+    height: 250px;
+    width: auto;   
+  }
+}
+
+@media (max-width: 767px) { /* mobile devices */
+  .memoji-img {
+    height: 200px; 
+    width: auto;   
+  }
+
+  .landing-text{
+    font-size: 2em !important;
+  }
+}
+
+#root-container {
+  position: relative; /* stacking context */
+}
+
+/* ScrollIndicator */
+.scroll-bar-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 12px;
+  background: #eee;
+  z-index: 2;
+}
+
+.scroll-bar-progress {
+  width: 100%;
+  background: linear-gradient(to bottom, #000, #4b4a4a);
+  border-radius: 0 0 6px 6px ;
+}
+
+
+
+
+
+
+.react-tel-input .selected-flag .flag {
+  padding: 0;
+}
+
+li.country .flag{
+  padding: 0;
+}
+
+.react-tel-input .arrow {
+  padding: 0;
+} 
+
+
+
+
+
+/* For Chrome, Safari, Edge */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px white inset; /* Replace 'white' with your input bg */
+  -webkit-text-fill-color: #000; /* Text color */
+  transition: background-color 5000s ease-in-out 0s; /* Optional: prevents flashing */
+}
+
+/* For Firefox */
+input:-moz-autofill {
+  box-shadow: 0 0 0px 1000px white inset;
+  -moz-text-fill-color: #000;
+}
+
+
+
+/* Chrome, Edge, Safari autofill */
+.form-control.no-bg-change:-webkit-autofill,
+.form-control.no-bg-change:-webkit-autofill:hover,
+.form-control.no-bg-change:-webkit-autofill:focus,
+.form-control.no-bg-change:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px white inset; /* Replace white with your background */
+  -webkit-text-fill-color: #000; /* Keep text color */
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Firefox */
+.form-control.no-bg-change:-moz-autofill {
+  box-shadow: 0 0 0px 1000px white inset;
+  -moz-text-fill-color: #000;
+}

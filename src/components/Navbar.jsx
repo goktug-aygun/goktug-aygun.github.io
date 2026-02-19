@@ -1,40 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 import LanguageDropdown from "./LanguageDropdown";
 
-export default function Navbar({ resources, language, onLanguageChange }) {
+export default function Navbar({
+  resources,
+  language,
+  onLanguageChange,
+  sections,
+}) {
   const navbarInfo = resources[language]["navbar"];
-  useEffect(() => {
-    const scrollButtons = document.getElementsByClassName("scroll");
 
-    for (let i = 0; i < scrollButtons.length; i++) {
-      scrollButtons[i].addEventListener("click", function () {
-        const targetId = this.getAttribute("data-target");
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) targetElement.scrollIntoView({ behavior: "smooth" });
-
-        const x = window.matchMedia("(max-width: 992px)");
-        if (x.matches) {
-          const toggler = document.querySelector(".navbar-toggler");
-          if (toggler) toggler.click();
-        }
-      });
+  const handleScrollClick = (ref) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
     }
 
-    return () => {
-      for (let i = 0; i < scrollButtons.length; i++) {
-        scrollButtons[i].removeEventListener("click", () => {});
-      }
-    };
-  }, []);
-
-  const [currentLanguage, setCurrentLanguage] = useState("en");
+    const x = window.matchMedia("(max-width: 992px)");
+    if (x.matches) {
+      const toggler = document.querySelector(".navbar-toggler");
+      if (toggler) toggler.click();
+    }
+  };
 
   const handleLanguageChange = (lang) => {
     onLanguageChange(lang);
-    console.log("Selected language:", lang);
   };
 
   return (
@@ -60,8 +51,8 @@ export default function Navbar({ resources, language, onLanguageChange }) {
             <li className="nav-item">
               <a
                 className="nav-link scroll"
-                data-target="home-page"
                 aria-current="page"
+                onClick={() => handleScrollClick(sections.home)}
               >
                 {navbarInfo["home-btn"]}
               </a>
@@ -69,8 +60,8 @@ export default function Navbar({ resources, language, onLanguageChange }) {
             <li className="nav-item">
               <a
                 className="nav-link scroll"
-                data-target="about-me-page"
                 aria-current="page"
+                onClick={() => handleScrollClick(sections.about)}
               >
                 {navbarInfo["about-me-btn"]}
               </a>
@@ -78,14 +69,17 @@ export default function Navbar({ resources, language, onLanguageChange }) {
             <li className="nav-item">
               <a
                 className="nav-link scroll"
-                data-target="projects-page"
                 aria-current="page"
+                onClick={() => handleScrollClick(sections.projects)}
               >
                 {navbarInfo["projects-exp-btn"]}
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link scroll" data-target="skills-page">
+              <a
+                className="nav-link scroll"
+                onClick={() => handleScrollClick(sections.skills)}
+              >
                 {navbarInfo["skills-btn"]}
               </a>
             </li>
@@ -130,7 +124,7 @@ export default function Navbar({ resources, language, onLanguageChange }) {
                 <li>
                   <a
                     className="dropdown-item scroll"
-                    data-target="contact-page"
+                    onClick={() => handleScrollClick(sections.contact)}
                   >
                     <i className="bi bi-envelope me-2"></i>
                     <span>{navbarInfo["contact-page"]}</span>

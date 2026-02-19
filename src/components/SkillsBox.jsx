@@ -5,7 +5,7 @@ function SkillsBox({ skills, title }) {
     <div className="skills-container m-2 p-4 d-flex flex-column align-items-center">
       <h2 className="mb-4 text-center">{title}</h2>
 
-      <div className="d-flex flex-wrap justify-content-evenly">
+      <div className="skills-grid">
         {skills.map((skill) => (
           <Skill key={skill.name} imageSrc={skill.imageSrc} name={skill.name} />
         ))}

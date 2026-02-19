@@ -39,6 +39,16 @@
     "desc": "Here are some of the projects to which I have contributed. During these projects, I was able to practice technical skills besides improving my social abilities. There are many more great projects to come...",
     "cards":[
     {
+        "id": "intern-didactlabs",
+        "title": "Software Engineering Intern at Didactlabs",
+        "desc": "I am currently working as a Software Engineering Intern at DidactLabs, where I contribute to the development and refinement of an AI-powered educational tool designed to support students in their learning process. Our goal is to create a balanced and trustworthy learning environment where AI serves as a supportive and transparent assistant for both students and teachers.",
+        "btn": "",
+        "href" : "",
+        "target" : "",
+        "date": "Feb. 2026 - Present",
+        "image":"didactlabs.png"
+    },
+    {
         "id": "master-leuven",
         "title": "Master's Education at KU Leuven",
         "desc": "I am pursuing my Master's Degree at KU Leuven with a strong focus on Artificial Intelligence and Machine Learning. I am eager to sharpen my skills and improve my expertise by contributing to projects and research in these fields. My goal is to apply AI-driven approaches to real-world problems and develop efficient, impactful solutions.",
@@ -70,8 +80,8 @@
     },
     {
         "id": "obss-intern",
-        "title": "C# .NET Mandatory Internship at OBSS",
-        "desc": "This is a project where I did for my mandatory internship. In this project I utilized C# .NET and React for the development of a website project covering both back-end and front-end. It provides authorization, authentication and HTTP request structure.",
+        "title": "C# .NET Internship at OBSS",
+        "desc": "In this project I utilized C# .NET and React for the development of a website project covering both back-end and front-end. It provides authorization, authentication and HTTP request structure.",
         "btn": "",
         "href" : "",
         "target" : "",
@@ -86,7 +96,7 @@
         "href" : "https://github.com/goktug-aygun/CS308-Project",
         "target" : "_blank",
         "date": "Spring 2024",
-        "image":"github.webp"
+        "image":"github-wallpaper-scaled.jpeg"
     },
     {
         "id": "wordle",
@@ -116,7 +126,7 @@
         "href" : "https://github.com/goktug-aygun/CS310_Mobile_Application",
         "target" : "_blank",
         "date": "Fall 2023",
-        "image":"github.webp"
+        "image":"github-wallpaper-scaled.jpeg"
     },
     {
         "id": "diSUcord-cs408",
@@ -126,7 +136,7 @@
         "href" : "https://github.com/goktug-aygun/CS408-Project",
         "target" : "_blank",
         "date": "Fall 2023",
-        "image":"github.webp"
+        "image":"github-wallpaper-scaled.jpeg"
     },
     {
         "id": "analysis-cs210",
@@ -136,7 +146,7 @@
         "href" : "http://github.com/goktug-aygun/CS210-Project",
         "target" : "_blank",
         "date": "Spring 2023",
-        "image":"github.webp"
+        "image":"github-wallpaper-scaled.jpeg"
     },
     {
         "id": "deathDB-cs306",
@@ -146,7 +156,7 @@
         "href" : "https://github.com/goktug-aygun/CS306-Project",
         "target" : "_blank",
         "date": "Spring 2023",
-        "image":"github.webp"
+        "image":"github-wallpaper-scaled.jpeg"
     },
     {
         "id": "la-cs201",
@@ -204,14 +214,16 @@
     "title": "Skills / CV",
     "desc": "Below are some of the programming languages and tools that I practiced with various projects and studies.",
     "pl-subtitle": "Programming Languages",
-    "tf-subtitle": "Frameworks & Libraries & Technologies",
+    "fl-subtitle": "Frameworks & Libraries",
+    "tech-subtitle": "Technologies",
     "cv-pre": "You can find my curriculum vitae (CV)",
     "cv-anchor": " here ",
     "cv-post": "as well."    
   }
   ,"contact-pg": {
     "title": "Contact",
-    "desc": "Please feel free to reach out if you have any questions. I would love to hear your feedbacks.",
+    "desc1": "Please feel free to reach out if you have any questions.",
+    "desc2": "I would love to hear your feedbacks.",
     "name-box": "Your Name",
     "email-box": "Your Email",
     "phone-number-box": "Your Phone Number (Not Required)",

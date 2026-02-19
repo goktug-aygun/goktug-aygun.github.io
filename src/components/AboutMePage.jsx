@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-export default function AboutMePage({ resources, language }) {
+export default function AboutMePage({ innerRef, resources, language }) {
   const images = [
     "images/carousel/diploma-img.jpg",
     "images/carousel/diploma-green.jpg",
@@ -11,7 +11,7 @@ export default function AboutMePage({ resources, language }) {
   const aboutMePageInfo = resources[language]["about-pg"];
 
   return (
-    <section id="about-me-page" className="page">
+    <section id="about-me-page" ref={innerRef} className="page">
       <div className="even min-vh-100 row">
         <h1 className="page-title">{aboutMePageInfo["title"]}</h1>
         <div className="carousel-container col-xl-6">

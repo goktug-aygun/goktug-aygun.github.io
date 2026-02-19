@@ -1,16 +1,20 @@
-export default function WelcomePage({ resources, language }) {
+import { useState } from "react";
+
+export default function WelcomePage({ innerRef, resources, language }) {
   const welcomePageInfo = resources[language]["home-pg"];
 
+  const [randomMemoji] = useState(() => {
+    return Math.random() < 0.5
+      ? "/images/memojis/memoji-wave-1.png"
+      : "/images/memojis/memoji-wave-2.png";
+  });
+
   return (
-    <section id="home-page" className="page odd pt-5">
+    <section id="home-page" ref={innerRef} className="page odd pt-5">
       <div className="welcome-box container-fluid d-flex flex-xl-row flex-column">
         {/* Memoji */}
         <div className="col-xl-6 d-flex justify-content-center align-items-center ">
-          <img
-            className="memoji-img"
-            src="images/memoji-wave.png"
-            alt="Goktug waving"
-          />
+          <img className="memoji-img" src={randomMemoji} alt="Goktug waving" />
         </div>
 
         {/* Landing box */}
