@@ -10,6 +10,9 @@ export default function MultiSvgSplash({ onFinish }) {
   useEffect(() => {
     // Animate all SVGs
     svgs.slice(0, 3).forEach((svgItem) => {
+      const el = document.getElementById(svgItem.id);
+      if (el) el.style.willChange = "transform, opacity";
+
       animate(svg.createDrawable(`#${svgItem.id} .line`), {
         draw: ["0 0", "0 1", "1 1"],
         duration: 3000,
@@ -25,8 +28,14 @@ export default function MultiSvgSplash({ onFinish }) {
         sloganRef.current.querySelectorAll(".slogan-word"),
       );
       words.forEach((word, index) => {
+        word.style.willChange = "transform, opacity";
+
         const split = splitText(word, {
           words: { wrap: "clip" },
+        });
+
+        split.words.forEach((w) => {
+          w.style.willChange = "transform, opacity";
         });
 
         animate(split.words, {
@@ -52,7 +61,10 @@ export default function MultiSvgSplash({ onFinish }) {
   }, []);
 
   return (
-    <div className={`splash-wrapper ${exiting ? "exiting" : ""}`}>
+    <div
+      className={`splash-wrapper ${exiting ? "exiting" : ""}`}
+      style={{ willChange: "transform, opacity" }}
+    >
       {svgs.slice(0, 3).map((svgItem, index) => (
         <div key={svgItem.id} className="splash-svg-row">
           <svg
@@ -67,7 +79,6 @@ export default function MultiSvgSplash({ onFinish }) {
           </svg>
         </div>
       ))}
-
       <div ref={sloganRef} className="splash-slogan-row">
         <span className="slogan-word">Bridging Worlds</span>
         <span className="slogan-word">Building Solutions</span>

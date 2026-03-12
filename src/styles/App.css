@@ -403,6 +403,14 @@ section{
     transition: opacity 0.3s ease;
   }
 
+  .go-up-btn:focus,
+  .go-up-btn:focus-visible,
+  .go-up-btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: #111 !important;
+  }
+
   .go-up-visible {
     opacity: 1;
     pointer-events: auto;
