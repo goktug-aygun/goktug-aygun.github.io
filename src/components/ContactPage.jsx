@@ -10,8 +10,8 @@ import "react-phone-input-2/lib/bootstrap.css";
 
 import trCountryNames from "../locales/countries_tr.json";
 
-import "../toast.css";
-import "../animations.css";
+import "../styles/toast.css";
+import "../styles/animations.css";
 
 export default function ContactPage({ innerRef, resources, language }) {
   const contactPageInfo = resources[language]["contact-pg"];
