@@ -360,12 +360,57 @@ section{
   box-shadow: none !important;      
 }
 
+.go-up-btn {
+  display: none;
+}
+
+.go-up-btn i {
+  -webkit-text-stroke: 0.5px #111;
+}
 
 /* ------ Font Sizes -------- */
 /* Mobile */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .lead {
     font-size: 1.25rem !important; 
+  }
+
+  .react-tel-input .flag-dropdown.open .country-list {
+    top: auto;
+    bottom: 100%;
+  }
+
+  .go-up-btn {
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 2rem;
+    right: 1.4rem;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1.5px solid #111;
+    background-color: #E5E7ED;
+    color: #111;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: opacity 0.3s ease;
+  }
+
+  .go-up-visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .go-up-hidden {
+    opacity: 0;
+    pointer-events: none;
   }
 }
 
@@ -396,7 +441,7 @@ section{
 }
 
 #root-container {
-  position: relative; /* stacking context */
+  position: relative; 
 }
 
 /* ScrollIndicator */
@@ -435,8 +480,6 @@ li.country .flag{
 
 
 
-
-
 /* For Chrome, Safari, Edge */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -460,8 +503,8 @@ input:-moz-autofill {
 .form-control.no-bg-change:-webkit-autofill:hover,
 .form-control.no-bg-change:-webkit-autofill:focus,
 .form-control.no-bg-change:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0px 1000px white inset; /* Replace white with your background */
-  -webkit-text-fill-color: #000; /* Keep text color */
+  -webkit-box-shadow: 0 0 0px 1000px white inset; 
+  -webkit-text-fill-color: #000; 
   transition: background-color 5000s ease-in-out 0s;
 }
 

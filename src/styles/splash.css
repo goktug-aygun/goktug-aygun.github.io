@@ -63,4 +63,14 @@
   .slogan-word span {
     font-size: 1.25rem;
   }
+
+  .project-card:hover {
+    transform: none;
+    z-index: unset;
+  }
+
+  .skill-box:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }

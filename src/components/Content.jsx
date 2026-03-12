@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import ScrollIndicator from "./ScrollIndicator";
 import WelcomePage from "./WelcomePage";
@@ -14,6 +14,24 @@ export default function Content({
   onLanguageChange,
 }) {
   const { homeRef, aboutRef, projectsRef, skillsRef, contactRef } = refs;
+  const [showGoUp, setShowGoUp] = useState(false);
+
+  useEffect(() => {
+    const container = document.querySelector(".app-container");
+    if (!container) return;
+    const handleScroll = () => {
+      setShowGoUp(container.scrollTop > window.innerHeight);
+    };
+    container.addEventListener("scroll", handleScroll);
+    return () => container.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    const container = document.querySelector(".app-container");
+    if (container) {
+      container.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="content-fadein">
@@ -57,6 +75,12 @@ export default function Content({
         />
       </div>
       <ScrollIndicator />
+      <button
+        className={`go-up-btn ${showGoUp ? "go-up-visible" : "go-up-hidden"}`}
+        onClick={scrollToTop}
+      >
+        <i className="bi bi-arrow-up" />
+      </button>
     </div>
   );
 }
