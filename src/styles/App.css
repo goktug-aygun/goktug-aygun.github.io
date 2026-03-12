@@ -103,6 +103,14 @@ body {
     height: auto;
 }
 
+.word-dim {
+  color: #b0b3b8;
+  transition: color 0.4s ease;
+}
+
+.word-reveal {
+  color: #212529;
+}
 
 .home_button {
     background-color: #212529;
