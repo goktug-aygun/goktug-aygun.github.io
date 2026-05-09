@@ -10,11 +10,12 @@ import "react-phone-input-2/lib/bootstrap.css";
 
 import trCountryNames from "../locales/countries_tr.json";
 
-import "../toast.css";
-import "../animations.css";
+import "../styles/toast.css";
+import "../styles/animations.css";
 
 export default function ContactPage({ innerRef, resources, language }) {
   const contactPageInfo = resources[language]["contact-pg"];
+  const footerInfo = resources[language]["footer"];
 
   const [vst_name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -101,7 +102,7 @@ export default function ContactPage({ innerRef, resources, language }) {
           setPhone("");
           setMessage("");
         },
-        (err) => {},
+        () => {},
       );
   }
 
@@ -167,7 +168,7 @@ export default function ContactPage({ innerRef, resources, language }) {
                 name: "number",
               }}
               inputClass="form-control no-bg-change"
-              containerClass="w-100"
+              containerClass="contact-phone-field w-100"
               inputStyle={{
                 width: "100%",
                 height: "58px",
@@ -188,7 +189,7 @@ export default function ContactPage({ innerRef, resources, language }) {
             <div className="text-center my-2">
               <button
                 type="submit"
-                className="btn btn-outline-dark w-100 text-center mx-auto"
+                className="contact-submit-btn w-100 text-center mx-auto"
               >
                 {contactPageInfo["send-btn"]}
               </button>
@@ -205,6 +206,11 @@ export default function ContactPage({ innerRef, resources, language }) {
           </div>
         </div>
       </div>
+      <footer className="footer-bar contact-footer">
+        <span className="footer-left">{footerInfo["copyright"]}</span>
+        <span className="footer-center">{footerInfo["rights"]}</span>
+        <span className="footer-right">{footerInfo["place"]}</span>
+      </footer>
     </section>
   );
 }

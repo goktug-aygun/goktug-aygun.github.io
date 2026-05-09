@@ -8,7 +8,7 @@ i18n.use(initReactI18next).init({
     en: { translation: en.default || en },
     tr: { translation: tr.default || tr },
   },
-  lng: "en", // default dil İngilizce
+  lng: "en", // default language English
   fallbackLng: "en",
   interpolation: { escapeValue: false },
 });

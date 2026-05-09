@@ -7,7 +7,9 @@ import LanguageDropdown from "./LanguageDropdown";
 export default function Navbar({
   resources,
   language,
+  theme,
   onLanguageChange,
+  onThemeToggle,
   sections,
 }) {
   const navbarInfo = resources[language]["navbar"];
@@ -47,14 +49,14 @@ export default function Navbar({
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav me-lg-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <a
                 className="nav-link scroll"
                 aria-current="page"
-                onClick={() => handleScrollClick(sections.home)}
+                onClick={() => handleScrollClick(sections.experience)}
               >
-                {navbarInfo["home-btn"]}
+                {navbarInfo["experience-btn"]}
               </a>
             </li>
             <li className="nav-item">
@@ -72,7 +74,7 @@ export default function Navbar({
                 aria-current="page"
                 onClick={() => handleScrollClick(sections.projects)}
               >
-                {navbarInfo["projects-exp-btn"]}
+                {navbarInfo["projects-btn"]}
               </a>
             </li>
             <li className="nav-item">
@@ -133,6 +135,30 @@ export default function Navbar({
               </ul>
             </li>
           </ul>
+          <div className="theme-toggle-wrapper">
+            <button
+              className="theme-toggle-switch"
+              type="button"
+              role="switch"
+              aria-checked={theme === "dark"}
+              onClick={onThemeToggle}
+              aria-label={navbarInfo["theme-toggle-label"]}
+              title={navbarInfo["theme-toggle-label"]}
+            >
+              <span className="theme-switch-track" aria-hidden="true">
+                <span className="theme-switch-thumb">
+                  <i
+                    className={`bi ${theme === "dark" ? "bi-moon-stars" : "bi-sun"}`}
+                  />
+                </span>
+              </span>
+              <span className="theme-switch-label">
+                {theme === "dark"
+                  ? navbarInfo["theme-dark-btn"]
+                  : navbarInfo["theme-light-btn"]}
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </nav>

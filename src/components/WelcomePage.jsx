@@ -39,15 +39,15 @@ export default function WelcomePage({ innerRef, resources, language }) {
           {/* Education Box*/}
           <div className="education-box mt-4">
             <div className="education-box mt-4 w-100">
-              {/* MSc */}
+              {/* MEng */}
               <div className="education-item p-3 mb-3 border rounded bg-light w-100">
-                <h5>MSc</h5>
+                <h5>MEng</h5>
                 <p className="fw-bold mb-1">
-                  {welcomePageInfo["education-msc"]["univ"]}
+                  {welcomePageInfo["education-meng"]["univ"]}
                 </p>
                 <div className="d-flex justify-content-center">
                   <p className="fw-bold mb-1 me-2">
-                    {`${welcomePageInfo["education-msc"]["city"]}, ${welcomePageInfo["education-msc"]["country"]}`}
+                    {`${welcomePageInfo["education-meng"]["city"]}, ${welcomePageInfo["education-meng"]["country"]}`}
                   </p>
                   <img
                     className="lang-icon"
@@ -56,10 +56,10 @@ export default function WelcomePage({ innerRef, resources, language }) {
                   />
                 </div>
                 <p className="mb-1">
-                  {welcomePageInfo["education-msc"]["focus"]}
+                  {welcomePageInfo["education-meng"]["focus"]}
                 </p>
                 <p className="text-muted mb-1">
-                  {welcomePageInfo["education-msc"]["date"]}
+                  {welcomePageInfo["education-meng"]["date"]}
                 </p>
                 {/* <p className="mb-0">GPA: —</p> N/A */}
               </div>
