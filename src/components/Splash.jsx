@@ -56,9 +56,9 @@ export default function MultiSvgSplash({ onFinish }) {
       setExiting(true);
       setTimeout(() => {
         if (onFinish) onFinish();
-      }, 1000);
+      }, 1050);
     }, 2500);
-  }, []);
+  }, [onFinish]);
 
   return (
     <div

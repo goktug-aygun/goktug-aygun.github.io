@@ -9,17 +9,19 @@
   gap: 40px;
   height: 100vh;
   justify-content: center;
-  background-color: #fff;
-  color: #111;
+  background-color: var(--splash-bg, #fff);
+  color: var(--splash-text, #111);
   padding: 0 20px;
   box-sizing: border-box;
   z-index: 5;
-  transition: opacity 3s ease, transform 3s ease;
+  transition:
+    opacity 1.05s ease,
+    transform 1.05s cubic-bezier(0.83, 0, 0.17, 1);
 }
 
 .splash-wrapper.exiting {
   opacity: 0;
-  transform: translateY(-60px);
+  transform: translateY(-100%);
 }
 
 .splash-svg-row {
@@ -62,11 +64,6 @@
 
   .slogan-word span {
     font-size: 1.25rem;
-  }
-
-  .project-card:hover {
-    transform: none;
-    z-index: unset;
   }
 
   .skill-box:hover {

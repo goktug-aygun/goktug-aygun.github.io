@@ -3,11 +3,11 @@ import React from "react";
 const ContactPageBox = React.forwardRef(
   ({ BoxText, id, className = "", ...props }, ref) => {
     return (
-      <div className="form-floating">
+      <div className="form-floating contact-field">
         <input
           id={id}
-          className={`form-control my-2 my-md-3 my-lg-4 ${className}`}
-          placeholder={BoxText}
+          className={`form-control ${className}`}
+          placeholder=" "
           ref={ref}
           {...props}
         />

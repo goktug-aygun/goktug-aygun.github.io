@@ -1,10 +1,13 @@
 {
   "navbar": {
     "name":"Göktuğ Aygün",
-    "home-btn": "Ana Sayfa",
+    "experience-btn": "Deneyimlerim",
     "about-me-btn": "Hakkımda",
-    "projects-exp-btn": "Projelerim ve Tecrübem",
+    "projects-btn": "Projelerim",
     "skills-btn": "Yeteneklerim / CV",
+    "theme-dark-btn": "Koyu",
+    "theme-light-btn": "Açık",
+    "theme-toggle-label": "Renk temasını değiştir",
     "contact-btn": "İletişim",
     "contact-github": "Github Profili",
     "contact-linkedin": "Linkedin Profili",
@@ -13,7 +16,7 @@
   "home-pg": {
     "landing-text": "Selam! Ben Göktuğ.",
     "cv-btn": "CV'me Bakın!",
-    "education-msc":{
+    "education-meng":{
          "city" : "Leuven",
         "country" : "Belçika",
         "univ" : "KU Leuven",
@@ -30,188 +33,235 @@
         "gpa" : "GANO"
     }
   },
+  "experience-pg": {
+    "title": "Deneyimlerim",
+    "desc": "Yazılım, yapay zeka, öğretim ve ekip çalışmalarında çalışma biçimimi şekillendiren eğitim ve uygulamalı roller.",
+    "education-title": "Eğitim",
+    "experience-title": "Deneyim",
+    "education": [
+      {
+        "id": "education-meng",
+        "degree": "MEng",
+        "institution": "KU Leuven",
+        "location": "Leuven, Belçika",
+        "focus": "Yapay Zeka",
+        "date": "2025 - 2027",
+        "gpa": "",
+        "flag": "belgium.png"
+      },
+      {
+        "id": "education-bsc",
+        "degree": "BSc",
+        "institution": "Sabancı Üniversitesi",
+        "location": "İstanbul, Türkiye",
+        "focus": "Bilgisayar Bilimi ve Mühendisliği",
+        "date": "2021 - 2025",
+        "gpa": "GANO: 3.78 / 4.00",
+        "flag": "turkey.png"
+      }
+    ],
+    "experiences": [
+      {
+        "id": "intern-didactlabs",
+        "role": "Yazılım Mühendisliği Stajyeri",
+        "organization": "DidactLabs",
+        "organizationHref": "https://didactlabs.com/en",
+        "desc": [
+          "Yapay zeka entegreli bir eğitim platformunun backend geliştirilmesine katkıda bulundum.",
+          "Özelliklerin geliştirilmesine, hata düzeltmelerine ve kod tabanının yeniden düzenlenmesine yardımcı oldum."
+        ],
+        "date": "2026"
+      },
+      {
+        "id": "mktg-member",
+        "role": "Pazarlama ve Kurumsal İletişim Ekibi Üyesi",
+        "organization": "Sabancı Üniversitesi",
+        "organizationHref": "https://www.sabanciuniv.edu/",
+        "desc": [
+          "Aday öğrencilere Sabancı Üniversitesi hakkında sunumlar yaptım."
+        ],
+        "date": "2022 - 2025"
+      },
+      {
+        "id": "obss-intern",
+        "role": "C# .NET Stajyeri",
+        "organization": "OBSS",
+        "organizationHref": "https://obss.tech/tr/",
+        "desc": [
+          "C# .NET ve React kullanarak full-stack bir web sitesi yaptım.",
+          "REST API'leri, authorization ve request flow geliştirdim."
+        ],
+        "date": "2024"
+      },
+      {
+        "id": "la-if100",
+        "role": "Programlama Derslerinde Öğrenim Asistanı",
+        "organization": "Sabancı Üniversitesi",
+        "organizationHref": "https://www.sabanciuniv.edu/",
+        "desc": [
+          "Python ve C++ kullanarak haftalık ofis ve soru çözüm seansları yönettim.",
+          "Asistan ekipleriyle ders metodolojisi ve içerik üzerinde çalıştım."
+        ],
+        "date": "2022 - 2023"
+      },
+      {
+        "id": "su-mentor",
+        "role": "Lise Yaz Okulu Mentörü",
+        "organization": "Sabancı Üniversitesi",
+        "organizationHref": "https://www.sabanciuniv.edu/",
+        "desc": [
+          "Yaz programındaki lise öğrencilerine mentörlük yaptım.",
+          "Etkinlik planlama ve kampüse uyum çalışmalarında görev aldım."
+        ],
+        "date": "2022"
+      },
+      {
+        "id": "finartz-intern",
+        "role": "Proje Stajyeri",
+        "organization": "Finartz",
+        "organizationHref": "https://finartz.com/en/",
+        "desc": [
+          "Bireysel ve ekip içinde geliştirme pratiği kazandım."
+        ],
+        "date": "2022"
+      }
+    ]
+  },
   "about-pg": {
     "title": "Hakkımda",
-    "desc": "Merhaba! Ben Göktuğ Aygün. Sabancı Üniversitesi Bilgisayar Bilimi ve Mühendisliği mezunuyum ve şu anda KU Leuven’de yüksek lisans eğitimime devam ediyorum. Yapay zeka ve makine öğrenimi alanında uzmanlaşıyor, bu alandaki bilgilerimi yenilikçi projelerde uygulama fırsatı bulmayı istiyorum. Farklı ekiplerde ve projelerde yer alarak deneyim kazanmayı hedefliyorum. Özellikle staj fırsatlarıyla ilgileniyor ve bu süreçte en yeni teknolojik çözümler üzerine bilgi ve becerilerimi geliştirmeyi amaçlıyorum."
+    "desc": "Merhaba! Ben Göktuğ Aygün. Sabancı Üniversitesi Bilgisayar Bilimi ve Mühendisliği mezunuyum ve şu anda KU Leuven’de MEng yüksek lisans programıma devam ediyorum. Yapay zeka ve makine öğrenimi alanında uzmanlaşıyor, bu alandaki bilgilerimi yenilikçi projelerde uygulama fırsatı bulmayı istiyorum. Farklı ekiplerde ve projelerde yer alarak deneyim kazanmayı hedefliyorum. Özellikle staj fırsatlarıyla ilgileniyor ve bu süreçte en yeni teknolojik çözümler üzerine bilgi ve becerilerimi geliştirmeyi amaçlıyorum."
   },"projects-pg": {
-    "title": "Projelerim ve Tecrübelerim",
-    "desc": "İşte katkıda bulunduğum bazı projeler. Bu projelerde, sosyal becerilerimi geliştirmeye ek olarak teknik yeteneklerimi de uygulama fırsatı buldum. Daha birçok harika projenin geleceğine inanıyorum...",
-    "cards":[
+    "title": "Projelerim",
+    "desc": "Geliştirdiğim veya katkıda bulunduğum seçili projeler, araştırma çalışmaları ve uygulamalar.",
+    "items":[
     {
-        "id": "intern-didactlabs",
-        "title": "DidactLabs'te Yazılım Mühendisliği Stajyeri",
-        "desc": "DidactLabs'te Yazılım Mühendisliği Stajyeri olarak, öğrencilerin öğrenme sürecini desteklemek amacıyla geliştirilen yapay zeka destekli bir eğitim aracının geliştirilmesine ve iyileştirilmesine katkı sağlıyorum. Amacımız, yapay zekanın hem öğrenciler hem de öğretmenler için destekleyici ve şeffaf bir yardımcı olarak konumlandığı, dengeli ve güvenilir bir öğrenme ortamı oluşturmaktır.",
-        "btn": "",
-        "href": "",
-        "target": "",
-        "date": "Şubat 2026'dan Beri",
-        "image": "didactlabs.png"
+        "id" : "cloud-ticketing-system",
+        "title": "Bulutta Yayınlanan Servis Odaklı Dağıtık Biletleme Sistemi",
+        "techStack": ["Java", "Google Cloud", "Dağıtık Sistemler", "Hata Toleransı"],
+        "desc": [
+          "Google Cloud üzerinde hata toleranslı, servis odaklı bir biletleme platformu tasarladım ve yayınladım.",
+          "Güvenilir ve güvenilir olmayan sağlayıcıları entegre etmek için retry ve timeout mekanizmaları geliştirdim."
+        ],
+        "image": "distributed.png",
+        "date": "Eyl. 2025 - Oca. 2026"
     },
     {
-        "id" : "master-leuven",
-        "title": "KU Leuven'de Yüksek Lisans Eğitimi",
-        "desc": "KU Leuven'de Yapay Zeka ve Makine Öğrenimi alanında yoğunlaşarak Yüksek Lisans eğitimime devam ediyorum. Bu alanlardaki projelere ve araştırmalara katkıda bulunarak becerilerimi geliştirmeyi ve uzmanlığımı ilerletmeyi hedefliyorum. Amacım, yapay zekâ odaklı yaklaşımları gerçek dünya problemlerine uygulamak ve etkili çözümler geliştirmek.",
-        "btn": "",
-        "href" : "",
-        "target" : "",
-        "date": "Eyl. 2025 - Tahm. Haz. 2027",
-        "image":"master-leuven.png"
+        "id" : "tsp-genetic-algorithm",
+        "title": "Gezgin Satıcı Probleminin Genetik Algoritmalar ile Optimizasyonu",
+        "techStack": ["Python", "Genetik Algoritmalar", "Optimizasyon"],
+        "desc": [
+          "Gezgin Satıcı Problemi için evrimsel operatörler kullanan bir Genetik Algoritma çözücüsü geliştirdim.",
+          "Hesaplama kompleksitesi ve çözüm kalitesi dengesini test ettim."
+        ],
+        "image": "ea.png",
+        "date": "Eyl. 2025 - Oca. 2026"
     },
     {
         "id" : "sabanci-curricula",
         "title": "Sabancı Üniversitesi Müfredatını Sürdürülebilir Kalkınma Hedefleri ile Analiz Etme",
-        "desc": "Bu projede, üniversite müfredatı ile Birleşmiş Milletler'in Sürdürülebilir Kalkınma Hedefleri arasındaki ilişkiyi Büyük Dil Modelleri ve Python kullanarak Dr. Hüsnü Yenigün ile birlikte değerlendiriyorum.",
-        "btn": "",
-        "href" : "",
-        "target" : "",
-        "date": "Kas. 2024 - Haz. 2025",
-        "image":"sdg_sabancı.png"
+        "techStack":["Python", "LLM"],
+        "desc": [
+          "Ders içeriklerini BM Sürdürülebilir Kalkınma Hedefleri ile eşleştirdim.",
+          "Dr. Hüsnü Yenigün ile LLM ve Python tabanlı araştırma yaptım."
+        ],
+        "image": "sdg_sabancı.png",
+        "date": "Kas. 2024 - Haz. 2025"
     },
     {
         "id" : "ens-rag",
         "title": "LLM Tabanlı Ders Asistanı RAG Uygulaması",
-        "desc": "Bu benim mezuniyet projem. 4 kişilik bir ekiple bir RAG uygulaması geliştirdik. Bu uygulama, öğrencilerin ders materyalleriyle etkileşimini teşvik etmeyi amaçlıyor. Meta'nın LLaMA Büyük Dil Modeli kullanıdık ve öğrenciler ile asistanlara yardımcı olmayı hedefliyor.",
-        "btn": "",
-        "href" : "",
-        "target" : "",
-        "date": "Eyl. 2024 - Haz. 2025",
-        "image":"llama-meta-491.png"
-    },
-    {
-        "id" : "obss-intern",
-        "title": "OBSS'de C# .NET Stajı",
-        "desc": "Projede, hem back-end hem front-end geliştirmek için C# .NET ve React kullandım. Proje, yetkilendirme, kimlik doğrulama ve HTTP istek yapılarını barındırıyor.",
-        "btn": "",
-        "href" : "",
-        "target" : "",
-        "date": "Yaz 2024",
-        "image":"obss.png"
+        "techStack": ["Python", "Flask", "MongoDB", "Docker", "FAISS", "Ollama", "LangChain", "React"],
+        "desc": [
+          "Dört kişilik ekiple geliştirilen mezuniyet projesi.",
+          "Ders etkileşimini artıran LLaMA tabanlı RAG asistanı."
+        ],
+        "image": "llama-meta-491.png",
+        "date": "Eyl. 2024 - Haz. 2025"
     },
     {
         "id" : "flightroster-cs308",
-        "title": "FlightRoster - Havacılık Güncellemesi",
-        "desc": "Bu web uygulaması, 10 kişilik bir ekip tarafından farklı teknolojiler kullanılarak geliştirildi. Hayali bir havayolu şirketinin veri ve operasyonlarını yönetmek için kullanılıyor.",
-        "btn": "Github Sayfasını Ziyaret Et",
-        "href" : "https://github.com/goktug-aygun/CS308-Project",
-        "target" : "_blank",
-        "date": "Bahar 2024",
-        "image":"github-wallpaper-scaled.jpeg"
+        "title": "FlightRoster - Havacılık Uygulaması",
+        "techStack": ["JavaScript", "ExpressJS", "MongoDB", "AWS", "REST APIs"],
+        "desc": [
+          "On kişilik ekiple geliştirilen havayolu operasyon web uygulaması.",
+          "Uçuş, ekip ve operasyon verileri için örnek yönetim akışları."
+        ],
+        "image": "flight_roster.jpg",
+        "date": "Şub. - Haz. 2024"
     },
     {
         "id" : "wordle",
         "title": "Wordle",
-        "desc": "\"Wordle\" oyununun bir klonunu HTML, CSS, Javascript ve Python kullanarak geliştirdim. Veritabanındaki kelimeler Türk Dil Kurumu'ndan alınmıştır.",
-        "btn": "Şimdi Oyna!",
-        "href" : "https://goktugaygun.com/wordle/index.html",
-        "target" : "_blank",
-        "date": "Şub. 2024",
-        "image":"wordle.png"
+        "techStack": ["HTML", "CSS", "JavaScript", "Python"],
+        "desc": [
+          "Tarayıcıda çalışan Türkçe Wordle klonu.",
+          "HTML, CSS, JavaScript ve Python ile geliştirildi."
+        ],
+        "image": "wordle.png",
+        "date": "Şub. 2024"
     },
     {
         "id" : "website",
         "title": "Bu Web Sitesi",
-        "desc": "Bu web sitesini ağırlıklı olarak HTML, CSS ve Bootstrap kullanarak oluşturdum. Görüşlerinizi duymayı çok isterim. İletişim sayfasını ziyaret etmeyi unutmayın.",
-        "btn": "İletişim Sayfasını Ziyaret Et",
-        "href" : "",
-        "target" : "",
-        "date": "Haz. - Tem. 2023",
-        "image":"welcome.png"
+        "techStack": ["React", "Vite", "Bootstrap", "i18next"],
+        "desc": [
+          "React, Vite ve Bootstrap ile geliştirilen kişisel portfolyo.",
+          "Projeler, deneyimler ve iletişim için yaşayan bir alan."
+        ],
+        "image": "welcome.png",
+        "date": "Haz. - Tem. 2023"
     },
     {
         "id" : "studyBuddy-cs310",
         "title": "StudyBuddy Mobil Uygulaması - Öğrencileri İşbirliğine Bağlama",
-        "desc": "Bu mobil uygulama, benzer dersleri alan öğrencilerin bir araya gelip kolayca iletişim kurabilmesini sağlamak amacıyla geliştirildi.",
-        "btn": "Github Sayfasını Ziyaret Et",
-        "href" : "https://github.com/goktug-aygun/CS310_Mobile_Application",
-        "target" : "_blank",
-        "date": "Güz 2023",
-        "image":"github-wallpaper-scaled.jpeg"
+        "techStack": ["Java", "Android"],
+        "desc": [
+          "Benzer dersleri alan öğrenciler için mobil uygulama.",
+          "Çalışma grubu bulmayı ve iletişimi kolaylaştırmaya odaklandı."
+        ],
+        "image": "study_buddy.jpg",
+        "date": "Eyl. 2023 - Oca. 2024"
     },
     {
         "id" : "diSUcord-cs408",
         "title": "DiSUCord - Kanallar Arası Mesajlaşma",
-        "desc": "Bu proje, popüler uygulama Discord'u taklit ederek TCP soketleri kullanıyor ve farklı kullanıcılar için iletişim ortamı sağlıyor.",
-        "btn": "Github Sayfasını Ziyaret Et",
-        "href" : "https://github.com/goktug-aygun/CS408-Project",
-        "target" : "_blank",
-        "date": "Güz 2023",
-        "image":"github-wallpaper-scaled.jpeg"
+        "techStack": ["TCP Sockets", "C#", ".NET"],
+        "desc": [
+          "TCP soketleri kullanan Discord benzeri mesajlaşma projesi.",
+          "Kanallar ve ağ üzerinden kullanıcı iletişimi etrafında geliştirildi."
+        ],
+        "image": "disucord.jpg",
+        "date": "Eyl. 2023 - Oca. 2024"
     },
     {
-        "id" : "analysis-210",
+        "id" : "analysis-cs210",
         "title": "Türkiye Büyük Meclisindeki Kadın Milletvekillerinin Analizi",
-        "desc": "Bu projeyi 5 kişilik bir ekiple geliştirdik. Temel amacımız, parlamentoda cinsiyet eşitsizliğini araştırmaktı.",
-        "btn": "Github Sayfasını Ziyaret Et",
-        "href" : "http://github.com/goktug-aygun/CS210-Project",
-        "target" : "_blank",
-        "date": "Bahar 2023",
-        "image":"github-wallpaper-scaled.jpeg"
+        "techStack": ["Python", "Matplotlib", "Pandas", "Scikit-learn", "BeatifulSoup", "Selenium"],
+        "desc": [
+          "Cinsiyet temsili üzerine ekip veri analizi projesi.",
+          "Türkiye parlamentosundaki kadın milletvekillerini inceledik."
+        ],
+        "image": "female_mp.jpg",
+        "date": "Şub. - Haz. 2023"
     },
     {
         "id" : "deathDB-cs306",
         "title": "Dünya Genelinde Ölüm Sebepleri Database Uygulaması",
-        "desc": "Bu proje, gerçek dünya verilerinden içgörüler elde etmek amacıyla; işleme teknikleri, MySQL ve veri görselleştirme araçları kullanılarak 5 öğrenci tarafından geliştirildi.",
-        "btn": "Github Sayfasını Ziyaret Et",
-        "href" : "https://github.com/goktug-aygun/CS306-Project",
-        "target" : "_blank",
-        "date": "Bahar 2023",
-        "image":"github-wallpaper-scaled.jpeg"
-    },
-    {
-        "id" : "la-cs201",
-        "title": "Bilgisayara Giriş Dersinde Öğrenim Asistanlığı",
-        "desc": "Bu, Sabancı Üniversitesi'nde C++ kullanılan bir derstir. Ders içeriğini düzenlemek için 26 kişilik bir ekibin parçası olarak çalıştım.",
-        "btn": "",
-        "href" : "",
-        "target" : "",
-        "date": "Bahar 2023",
-        "image":"cs201.png"
-    },
-    {
-        "id" : "mktg-member",
-        "title": "Pazarlama ve Kurumsal İletişim Ekibi Üyesi",
-        "desc": "70'ten fazla kişiden oluşan bir ekipte yer aldım. Sabancı Üniversitesi hakkında sunumlar yaptım ve konuşmalar gerçekleştirdım. Üniversite öğrencilerinden oluşan bir ekip olarak lise öğrencilerine yönelik etkinlikler düzenledik.",
-        "btn": "",
-        "href" : "",
-        "target" : "",
-        "date": "Eyl. 2022 - Haz. 2025",
-        "image":"sabanci.png"
-    },
-    {
-        "id" : "la-if100",
-        "title": "Problem Çözmeye Hesaplamalı Yaklaşımlar Dersinde Öğrenim Asistanlığı",
-        "desc": "Bu Sabancı Üniversitesi dersinde Python kullanılıyor. Ders, öğrencilere hesaplamalı düşünme ve algoritma geliştirme gibi kavramları tanıtıyor. Dersin metodolojisini şekillendiren 26 kişilik ekibin bir üyesiydim.",
-        "btn": "",
-        "href" : "",
-        "target" : "",
-        "date": "Güz 2022, Güz 2023",
-        "image":"if100.png"
-    },
-    {
-        "id" : "su-mentor",
-        "title": "Sabancı Üniversitesi Yaz Lisesi Mentoru",
-        "desc": "25 kişilik bir ekiple çalışarak etkinlikler düzenledim ve lise öğrencilerinin kampüs hayatına uyum sağlamasına yardımcı oldum. Ayrıca organizasyon ekibinde yer alarak sahne arkasında neler olduğunu öğrendim.",
-        "btn": "Daha Fazla Gör",
-        "href" : "https://gazetesu.sabanciuniv.edu/tr/lise-yaz-okullari-bu-yil-1913-ogrenciye-ulasti",
-        "date": "Haz. - Ağu. 2022",
-        "image":"su-mentor.png"
-    },
-    {
-        "id": "finartz-intern",
-        "title": "Finartz'de Proje Stajyeri",
-        "desc": "Bu, 2 haftalık gönüllü bir staj programı. Bireysel olarak ve ekip içinde proje geliştirme konusunda daha fazla deneyim kazandım.",
-        "btn": "",
-        "href" : "",
-        "target" : "",
-        "date": "Şub. 2022",
-        "image":"finartz.png"
+        "techStack": ["MySQL", "Python", "Matplotlib", "Seaborn"],
+        "desc": [
+          "Beş kişilik ekiple geliştirilen veritabanı uygulaması.",
+          "Ölüm sebeplerini MySQL, işleme ve görselleştirme ile inceledik."
+        ],
+        "image": "deaths.jpg",
+        "date": "Şub. - Haz. 2023"
     }
 ]
 
     
-  },"skills-pg": {
+  },
+  "skills-pg": {
     "title": "Yeteneklerim / CV",
-    "desc": "Aşağıda, çeşitli projeler ve çalışmalarla deneyim kazandığım bazı programlama dilleri ve araçlar bulunmaktadır.",
+    "desc": "İşte, çeşitli projeler ve çalışmalarla deneyim kazandığım bazı programlama dilleri ve araçların listesi.",
     "pl-subtitle": "Programlama Dilleri",
     "fl-subtitle": "Frameworkler & Kütüphaneler",
     "tech-subtitle": "Teknolojiler",
@@ -234,6 +284,11 @@
         "valid_warning": "Mesajınız için teşekkürler! En kısa sürede size dönüş yapacağım."
     },
     "send-btn": "Gönder"
+},
+"footer": {
+    "copyright": "© 2024 Göktuğ Aygün",
+    "rights": "Tüm hakları saklıdır.",
+    "place": "Leuven / Belçika"
 }
 
 }

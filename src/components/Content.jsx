@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import ScrollIndicator from "./ScrollIndicator";
-import WelcomePage from "./WelcomePage";
+import ExperiencePage from "./ExperiencePage";
 import AboutMePage from "./AboutMePage";
 import ProjectsPage from "./ProjectsPage";
 import SkillsPage from "./SkillsPage";
@@ -11,9 +11,17 @@ export default function Content({
   refs,
   resources,
   language,
+  theme,
   onLanguageChange,
+  onThemeToggle,
 }) {
-  const { homeRef, aboutRef, projectsRef, skillsRef, contactRef } = refs;
+  const {
+    experienceRef,
+    aboutRef,
+    projectsRef,
+    skillsRef,
+    contactRef,
+  } = refs;
   const [showGoUp, setShowGoUp] = useState(false);
 
   useEffect(() => {
@@ -37,7 +45,7 @@ export default function Content({
     <div className="content-fadein">
       <Navbar
         sections={{
-          home: homeRef,
+          experience: experienceRef,
           about: aboutRef,
           projects: projectsRef,
           skills: skillsRef,
@@ -45,11 +53,13 @@ export default function Content({
         }}
         resources={resources}
         language={language}
+        theme={theme}
         onLanguageChange={onLanguageChange}
+        onThemeToggle={onThemeToggle}
       />
       <div className="app-container">
-        <WelcomePage
-          innerRef={homeRef}
+        <ExperiencePage
+          innerRef={experienceRef}
           resources={resources}
           language={language}
         />

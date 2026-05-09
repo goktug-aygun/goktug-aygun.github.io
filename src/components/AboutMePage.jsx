@@ -11,6 +11,7 @@ export default function AboutMePage({ innerRef, resources, language }) {
     "images/carousel/la-img.jpg",
   ];
   const aboutMePageInfo = resources[language]["about-pg"];
+  const aboutDescription = aboutMePageInfo["desc"];
 
   useEffect(() => {
     const el = textRef.current;
@@ -23,7 +24,7 @@ export default function AboutMePage({ innerRef, resources, language }) {
     }
 
     // Split text into word spans
-    const words = aboutMePageInfo["desc"].split(" ");
+    const words = aboutDescription.split(" ");
     el.innerHTML = words
       .map((word) => `<span class="word-dim">${word} </span>`)
       .join("");
@@ -63,7 +64,7 @@ export default function AboutMePage({ innerRef, resources, language }) {
         el._timeouts = [];
       }
     };
-  }, [language]);
+  }, [aboutDescription]);
 
   return (
     <section id="about-me-page" ref={innerRef} className="page">
