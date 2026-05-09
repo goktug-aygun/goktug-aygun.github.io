@@ -1,6 +1,18 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem("portfolio-theme");
+          if (theme === "dark" || theme === "light") {
+            document.documentElement.dataset.theme = theme;
+          }
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/images/website-icon.png" />
@@ -24,10 +36,9 @@
     })(window, document, 'script', 'dataLayer', 'GTM-PC6QHLTG');</script>
   <!-- End Google Tag Manager -->
 
-
     <title>Goktug Aygun</title>
-    <script type="module" crossorigin src="/assets/index-CGH93v5T.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B-wo6KeT.css">
+    <script type="module" crossorigin src="/assets/index-Bo5pnb4_.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Jfi9s_J1.css">
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
