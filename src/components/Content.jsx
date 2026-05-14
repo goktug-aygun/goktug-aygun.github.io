@@ -6,6 +6,7 @@ import AboutMePage from "./AboutMePage";
 import ProjectsPage from "./ProjectsPage";
 import SkillsPage from "./SkillsPage";
 import ContactPage from "./ContactPage";
+import CursorEffects from "./CursorEffects";
 
 export default function Content({
   refs,
@@ -43,6 +44,7 @@ export default function Content({
 
   return (
     <div className="content-fadein">
+      <CursorEffects />
       <Navbar
         sections={{
           experience: experienceRef,
