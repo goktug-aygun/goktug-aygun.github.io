@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import ScrollIndicator from "./ScrollIndicator";
 import ExperiencePage from "./ExperiencePage";
 import AboutMePage from "./AboutMePage";
+import ThesisPage from "./ThesisPage";
 import ProjectsPage from "./ProjectsPage";
 import SkillsPage from "./SkillsPage";
 import ContactPage from "./ContactPage";
@@ -19,6 +20,7 @@ export default function Content({
   const {
     experienceRef,
     aboutRef,
+    thesisRef,
     projectsRef,
     skillsRef,
     contactRef,
@@ -49,6 +51,7 @@ export default function Content({
         sections={{
           experience: experienceRef,
           about: aboutRef,
+          thesis: thesisRef,
           projects: projectsRef,
           skills: skillsRef,
           contact: contactRef,
@@ -67,6 +70,11 @@ export default function Content({
         />
         <AboutMePage
           innerRef={aboutRef}
+          resources={resources}
+          language={language}
+        />
+        <ThesisPage
+          innerRef={thesisRef}
           resources={resources}
           language={language}
         />

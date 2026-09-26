@@ -2,13 +2,10 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-import LanguageDropdown from "./LanguageDropdown";
-
 export default function Navbar({
   resources,
   language,
   theme,
-  onLanguageChange,
   onThemeToggle,
   sections,
 }) {
@@ -24,10 +21,6 @@ export default function Navbar({
       const toggler = document.querySelector(".navbar-toggler");
       if (toggler) toggler.click();
     }
-  };
-
-  const handleLanguageChange = (lang) => {
-    onLanguageChange(lang);
   };
 
   return (
@@ -72,6 +65,15 @@ export default function Navbar({
               <a
                 className="nav-link scroll"
                 aria-current="page"
+                onClick={() => handleScrollClick(sections.thesis)}
+              >
+                {navbarInfo["thesis-btn"]}
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                className="nav-link scroll"
+                aria-current="page"
                 onClick={() => handleScrollClick(sections.projects)}
               >
                 {navbarInfo["projects-btn"]}
@@ -85,8 +87,6 @@ export default function Navbar({
                 {navbarInfo["skills-btn"]}
               </a>
             </li>
-
-            <LanguageDropdown onLanguageChange={handleLanguageChange} />
 
             {/* Reach Me Dropdown */}
             <li className="nav-item dropdown">

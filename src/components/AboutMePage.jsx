@@ -9,7 +9,9 @@ export default function AboutMePage({ innerRef, resources, language }) {
     "images/carousel/diploma-img.jpg",
     "images/carousel/diploma-green.jpg",
     "images/carousel/la-img.jpg",
+    "images/carousel/ml6-black.jpeg",
   ];
+
   const aboutMePageInfo = resources[language]["about-pg"];
   const aboutDescription = aboutMePageInfo["desc"];
 
@@ -17,16 +19,29 @@ export default function AboutMePage({ innerRef, resources, language }) {
     const el = textRef.current;
     if (!el) return;
 
-    // Clear any pending timeouts
     if (el._timeouts) {
       el._timeouts.forEach(clearTimeout);
       el._timeouts = [];
     }
 
-    // Split text into word spans
-    const words = aboutDescription.split(" ");
-    el.innerHTML = words
-      .map((word) => `<span class="word-dim">${word} </span>`)
+    // Split the description into paragraphs using \n
+    const paragraphs = aboutDescription.split(/\n/);
+
+    // Create word spans for each paragraph
+    el.innerHTML = paragraphs
+      .map((paragraph, paragraphIndex) => {
+        const words = paragraph.trim().split(/\s+/);
+
+        const content = words
+          .filter((word) => word.length > 0)
+          .map((word) => `<span class="word-dim">${word} </span>`)
+          .join("");
+
+        // Add a clear line break between paragraphs
+        return paragraphIndex < paragraphs.length - 1
+          ? `${content}<br /><br />`
+          : content;
+      })
       .join("");
 
     const spans = Array.from(el.querySelectorAll(".word-dim"));
@@ -40,12 +55,14 @@ export default function AboutMePage({ innerRef, resources, language }) {
               span.classList.add("word-reveal");
             }, index * 50);
           });
+
           el._timeouts = timeouts;
         } else {
           if (el._timeouts) {
             el._timeouts.forEach(clearTimeout);
             el._timeouts = [];
           }
+
           spans.forEach((span) => {
             span.style.transition = "color 0.1s ease";
             span.classList.remove("word-reveal");
@@ -59,6 +76,7 @@ export default function AboutMePage({ innerRef, resources, language }) {
 
     return () => {
       observer.disconnect();
+
       if (el._timeouts) {
         el._timeouts.forEach(clearTimeout);
         el._timeouts = [];
@@ -70,6 +88,7 @@ export default function AboutMePage({ innerRef, resources, language }) {
     <section id="about-me-page" ref={innerRef} className="page">
       <div className="even min-vh-100 row">
         <h1 className="page-title">{aboutMePageInfo["title"]}</h1>
+
         <div className="carousel-container col-xl-6">
           <div
             id="photoCarousel"
@@ -86,10 +105,12 @@ export default function AboutMePage({ innerRef, resources, language }) {
                     className="repeating-background"
                     style={{ backgroundImage: `url(${src})` }}
                   ></div>
+
                   <img src={src} alt={`Foto ${index + 1}`} />
                 </div>
               ))}
             </div>
+
             <button
               className="carousel-control-prev"
               type="button"
@@ -99,6 +120,7 @@ export default function AboutMePage({ innerRef, resources, language }) {
               <span className="carousel-control-prev-icon"></span>
               <span className="visually-hidden">Previous</span>
             </button>
+
             <button
               className="carousel-control-next"
               type="button"
@@ -110,6 +132,7 @@ export default function AboutMePage({ innerRef, resources, language }) {
             </button>
           </div>
         </div>
+
         <div className="landing-box col-xl-6 py-3 py-md-5 d-flex align-items-start">
           <span ref={textRef} className="lead px-3 px-md-5" />
         </div>

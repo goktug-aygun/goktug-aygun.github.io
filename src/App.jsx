@@ -18,6 +18,7 @@ export default function App() {
   const refs = {
     experienceRef: useRef(null),
     aboutRef: useRef(null),
+    thesisRef: useRef(null),
     projectsRef: useRef(null),
     skillsRef: useRef(null),
     contactRef: useRef(null),

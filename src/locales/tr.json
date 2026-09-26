@@ -3,6 +3,7 @@
     "name":"Göktuğ Aygün",
     "experience-btn": "Deneyimlerim",
     "about-me-btn": "Hakkımda",
+    "thesis-btn": "Tez",
     "projects-btn": "Projelerim",
     "skills-btn": "Yeteneklerim / CV",
     "theme-dark-btn": "Koyu",
@@ -62,6 +63,17 @@
     ],
     "experiences": [
       {
+        "id": "intern-ml6",
+        "role": "Yapay Zeka Mühendisi Stajyeri",
+        "organization": "ML6",
+        "organizationHref": "https://www.ml6.eu/en/",
+        "desc": [
+          "Eski yazılım sistemlerinin yapay zeka ile otomatik olarak dönüştürülmesine yönelik ajan tabanlı yaklaşımlar üzerine araştırma yapıyorum.",
+          "Yapay zeka destekli kod dönüşüm süreçleri için ölçeklenebilir bir sistem mimarisi tasarlayıp geliştiriyorum."
+        ],
+        "date": "2026"
+      },
+      {
         "id": "intern-didactlabs",
         "role": "Yazılım Mühendisliği Stajyeri",
         "organization": "DidactLabs",
@@ -84,7 +96,7 @@
       },
       {
         "id": "obss-intern",
-        "role": "C# .NET Stajyeri",
+        "role": "Yazılım Mühendisliği Stajyeri",
         "organization": "OBSS",
         "organizationHref": "https://obss.tech/tr/",
         "desc": [
@@ -130,7 +142,12 @@
   "about-pg": {
     "title": "Hakkımda",
     "desc": "Merhaba! Ben Göktuğ Aygün. Sabancı Üniversitesi Bilgisayar Bilimi ve Mühendisliği mezunuyum ve şu anda KU Leuven’de MEng yüksek lisans programıma devam ediyorum. Yapay zeka ve makine öğrenimi alanında uzmanlaşıyor, bu alandaki bilgilerimi yenilikçi projelerde uygulama fırsatı bulmayı istiyorum. Farklı ekiplerde ve projelerde yer alarak deneyim kazanmayı hedefliyorum. Özellikle staj fırsatlarıyla ilgileniyor ve bu süreçte en yeni teknolojik çözümler üzerine bilgi ve becerilerimi geliştirmeyi amaçlıyorum."
-  },"projects-pg": {
+  },
+  "thesis-pg": {
+    "title": "Tez",
+    "desc": "Tez çalışmam şu anda devam ediyor. Proje geliştikçe bu sayfa araştırma sorusu, metodoloji ve sonuçlarla güncellenecektir."
+  },
+  "projects-pg": {
     "title": "Projelerim",
     "desc": "Geliştirdiğim veya katkıda bulunduğum seçili projeler, araştırma çalışmaları ve uygulamalar.",
     "items":[

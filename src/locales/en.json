@@ -3,6 +3,7 @@
     "name":"Goktug Aygun",
     "experience-btn": "Experience",
     "about-me-btn": "About Me",
+    "thesis-btn": "Thesis",
     "projects-btn": "Projects",
     "skills-btn": "Skills / CV",
     "theme-dark-btn": "Dark",
@@ -62,6 +63,17 @@
     ],
     "experiences": [
       {
+        "id": "intern-ml6",
+        "role": "AI Engineer Intern",
+        "organization": "ML6",
+        "organizationHref": "https://www.ml6.eu/en/",
+        "desc": [
+          "Architected a multi-agent AI pipeline with a custom file-based API for inter-agent communication, autonomously modernizing over 30,000 lines of financial COBOL across 44 files into modular Python 3.",
+          "Engineered the Python orchestration infrastructure, integrating a deterministic state-machine, Docker-isolated sandbox, and robust pytest-based validation."
+        ],
+        "date": "2026"
+      },
+      {
         "id": "intern-didactlabs",
         "role": "Software Engineering Intern",
         "organization": "DidactLabs",
@@ -85,7 +97,7 @@
       },
       {
         "id": "obss-intern",
-        "role": "C# .NET Intern",
+        "role": "Software Engineering Intern",
         "organization": "OBSS",
         "organizationHref": "https://obss.tech/tr/",
         "desc": [
@@ -130,7 +142,11 @@
   },
   "about-pg": {
     "title": "About Me",
-    "desc": "Hi there! I am Goktug Aygun, a Computer Science and Engineering graduate from Sabancı University and currently pursuing my MEng degree at KU Leuven. I am specializing in Artificial Intelligence and Machine Learning, and I am eager to apply my expertise by contributing to innovative projects. My main objective is to gain further experience by taking on roles in diverse teams and projects. With a keen interest in internship opportunities, I aim to continue developing my skills and knowledge in cutting-edge technological solutions."
+    "desc": "Hi there! I’m Goktug Aygun, a Computer Science and Engineering graduate from Sabancı University and currently pursuing my MEng at KU Leuven, specializing in Artificial Intelligence and Machine Learning. \n Every day, I work towards applying AI technologies to create real-world value. I’m particularly interested in moving beyond toy problems and exploring how AI can be developed into practical solutions for challenges that matter in the real world."
+  },
+  "thesis-pg": {
+    "title": "Thesis",
+    "desc": "Agentic AI is an emerging paradigm in AI that enables systems not only to generate information, but also to interact with their environment and take actions. This opens up exciting possibilities for automating and improving complex software engineering tasks. \n As part of my master thesis, I am working directly with Prof. Dr. Tom Holvoet to investigate the use of Agentic AI for code and unit test generation. I am exploring existing approaches, studying how effectively agents can generate reliable software and tests, and looking for opportunities to improve these approaches."
   },
   "projects-pg": {
     "title": "Projects",

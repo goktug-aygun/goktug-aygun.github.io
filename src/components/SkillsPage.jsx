@@ -1,4 +1,5 @@
 import SkillsBox from "../components/SkillsBox";
+import { CV_URL } from "../constants/cv";
 
 const PLData = [
   { name: "Python", imageSrc: "/images/skills/PL/Python.png" },
@@ -58,7 +59,7 @@ export default function SkillsPage({ innerRef, resources, language }) {
         </div>
         <p className="lead">
           {skillsPageInfo["cv-pre"]}
-          <a className="downloadCV" href="Goktug_Aygun_CV.pdf" target="_blank">
+          <a className="downloadCV" href={CV_URL} target="_blank">
             {skillsPageInfo["cv-anchor"]}
           </a>
           {skillsPageInfo["cv-post"]}

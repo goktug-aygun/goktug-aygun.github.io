@@ -1,3 +1,5 @@
+import { CV_URL } from "../constants/cv";
+
 export default function ExperiencePage({ innerRef, resources, language }) {
   const experiencePageInfo = resources[language]["experience-pg"];
   const renderSummary = (summary) => {
@@ -105,7 +107,7 @@ export default function ExperiencePage({ innerRef, resources, language }) {
               </div>
               <a
                 className="experience-cv-button"
-                href="Goktug_Aygun_CV.pdf"
+                href={CV_URL}
                 target="_blank"
                 rel="noreferrer"
               >

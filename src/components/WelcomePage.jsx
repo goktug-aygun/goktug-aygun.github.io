@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { CV_URL } from "../constants/cv";
 
 export default function WelcomePage({ innerRef, resources, language }) {
   const welcomePageInfo = resources[language]["home-pg"];
@@ -28,7 +29,7 @@ export default function WelcomePage({ innerRef, resources, language }) {
           </span>
 
           <a
-            href="Goktug_Aygun_CV.pdf"
+            href={CV_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="downloadCV home_button"
